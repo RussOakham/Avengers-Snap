@@ -2,7 +2,7 @@
 
 ## Project overview
 
-'Avengers Snap' is na interactive card matching game themed around Marvels Avengers.
+'Avengers Snap' is an interactive card matching game themed around Marvels Avengers.
 
 The game is created to engage and entertain users of all ages, especially those who enjoy Marvels comic and cinematic universe. It has been designed to be immersive and stimulating to users, via interactive elements such as animations and sound cues. The game is easy to play, but offers various difficulty lessions for prolonged user engagement.
 
@@ -17,11 +17,29 @@ A live version of the website can be found *here*.
 ## Table of Contents
 
 1. [**UX**](#ux)
-    - [**Structure**](#user-stories)
+    - [**User-Stories**](#user-stories)
+    - [**Structure**](#structure)
     - [**Skeleton**](#skeleton)
     - [**Surface**](#surface)
-    - [**Colour**](#colour)
-    - [**Language/Tone**](#Language/Tone)
+
+2. [**Features**](#features)
+    - [**Existing Features**](#existing-features)
+    - [**Features to consider in future**](#features-to-consider-implementing-in-future)
+
+3. [**Technologies Used**](#technologies-used)
+
+4. [**Testing**](#testing)
+
+5. [**Deployment**](#deployment)
+    - [**GitHub Pages**](#github-pages)
+
+6. [Credits](#credits)
+    - [**Design and Research**](#design-and-research)
+    - [**Technical**](#technical)
+    - [**Content**](#content)
+    - [**Media**](#media)
+    - [**Acknowledgements**](#acknowledgements)
+
 
 ## 1. UX
 
@@ -105,7 +123,7 @@ Before beginning development, I listed some styling ideas that I felt benefit th
 
  **Favicon**: Present on every page and in the form of business logo, allows users to identify the site by just seeing the icon on tab.
 
-### Features to consider implementing in future.
+### Features to consider implementing in future
 
 ## 3. Technologies Used
 1. [HTML](https://en.wikipedia.org/wiki/HTML) - Programming language providing content and structure of website.
