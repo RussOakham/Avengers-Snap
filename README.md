@@ -86,10 +86,13 @@ With this in mind I chose the below as core design colours for the website;
 - Hulk - #00991f
 - Mjolnir - #999999
 - Hawkeye - #460061
+- Cyber Yellow - #FFD300
 
-The colour palette was originally curated by iamtheagirl on [color-hex.com](https://www.color-hex.com/color-palette/7706).
+The colour palettes were originally curated by iamtheagirl on [color-hex.com](https://www.color-hex.com/color-palette/7706) and Vivid Narwhal on [schemecholor.com](https://www.schemecolor.com/avengers-infinity-stones.php).
 
-![Colour Scheme](design-resources/colour-palette/avengers-color-palette-color-hex.com.png)
+![Colour Scheme 1](design-resources/colour-palette/avengers-color-palette-color-hex.com.png)
+
+![Colour Scheme 2](design-resources/colour-palette/avengers-infinity-stones-color-palette.png)
 
 #### Language/Tone 
 I wanted the language to reflect the casual and fun atmosphere of the game, so content was written in line with this. Avoiding technical or formal language where possible.
