@@ -30,9 +30,40 @@ body {
     border: solid 2px #000;
     background-image: radial-gradient(circle, yellow, orange);
     box-shadow: 0 6px 6px -6px #000;
+    border-radius: .25rem;
 }
 
-/* Media Query Margin */
+.game-panel {
+    padding: 5px;
+    height: 600px;
+    border: solid 2px #000;
+    background-image: radial-gradient(circle, yellow, orange);
+    box-shadow: 0 6px 6px -6px #000;
+    border-radius: .25rem;
+}
+
+.btn-warning {
+    background-image: radial-gradient(circle, yellow, orange);
+    border: solid 2px #000;
+    font-weight: 600;
+}
+
+.row {
+    padding-right: 0;
+}
+
+.text-box-spacing {
+    padding: 0 0 0 4px;
+}
+
+.text-box {
+    background-image: radial-gradient(circle, yellow, orange);
+    border: solid 2px #000;
+    border-radius: 0;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: .25rem;
+}
 
 .avengers-banner {
     height: 20vh;
