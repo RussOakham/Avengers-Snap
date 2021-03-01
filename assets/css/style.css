@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@300;400;700&display=swap');
 
+html, body {
+  margin:0;
+  padding:0;
+}
+
+body {
+    background-color: #3268BD;
+    font-family: 'Comic Neue', cursive;
+}
+
 .navbar {
     font-family: 'Bangers', cursive;
 }
@@ -14,8 +24,17 @@
     background-color: #e9ecef;
 }
 
-body {
-    background-color: #3268BD;
-    font-family: 'Comic Neue', cursive;
+.banner-container {
+    margin: 10px auto 10px auto;
+    max-width: 430px;
+    border: solid 2px #000;
+    background-image: radial-gradient(circle, yellow, orange);
+    box-shadow: 0 6px 6px -6px #000;
 }
 
+/* Media Query Margin */
+
+.avengers-banner {
+    height: 20vh;
+    background: url("../images/shutterstock_1328369057-avengers-logo-removebg.png") center center/contain no-repeat;
+}
