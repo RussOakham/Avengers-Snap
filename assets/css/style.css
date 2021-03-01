@@ -12,6 +12,7 @@ body {
 
 .navbar {
     font-family: 'Bangers', cursive;
+    box-shadow: 0 6px 6px -6px #000;
 }
 .navbar-brand {
     padding-top: 0;
@@ -22,6 +23,17 @@ body {
 
 .navbar-colour {
     background-color: #e9ecef;
+}
+
+.footer-section {
+    height: 140px;
+    background-color: #e9ecef;
+    margin-top: 40px;
+}
+
+.footer-info {
+    margin-top: 30px;
+    font-weight: 700;
 }
 
 .banner-container {
@@ -45,7 +57,7 @@ body {
 .btn-warning {
     background-image: radial-gradient(circle, yellow, orange);
     border: solid 2px #000;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .row {
@@ -60,7 +72,7 @@ body {
     background-image: radial-gradient(circle, yellow, orange);
     border: solid 2px #000;
     border-radius: 0;
-    font-weight: 600;
+    font-weight: 700;
     padding: 6px 12px;
     border-radius: .25rem;
 }
@@ -77,3 +89,4 @@ body {
     height: 20vh;
     background: url("../images/shutterstock_1328369057-avengers-logo-removebg.png") center center/contain no-repeat;
 }
+
