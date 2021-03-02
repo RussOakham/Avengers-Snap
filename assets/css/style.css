@@ -103,16 +103,17 @@ body {
     display: flex;
     margin: auto;
     padding: 5px;
-    height: 640px;
+    /* height: 640px; */
     border: solid 2px #000;
     background-image: radial-gradient(circle, yellow, orange);
     box-shadow: 0 6px 6px -6px #000;
     border-radius: .25rem;
+    justify-content: center;
 }
 
 .memory-card {
-    width: calc(25% - 10px);
-    height: calc(33.333% - 10px);
+    width: 100px;
+    height: 140px;
     margin: 5px;
     position: relative;
     box-shadow: 0 6px 6px -6px #000;
