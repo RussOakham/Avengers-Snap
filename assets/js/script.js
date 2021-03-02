@@ -15,6 +15,12 @@ let firstCard, secondCard;
 let moves = 0;
 let counter = document.querySelector(".moves");
 
+// Variables for game timer
+let second = 0, minute = 0;
+var timer = document.querySelector(".timer");
+var interval;
+
+
 // Activate flip card animation on click, via adding 'flip' to class name and setting variable 'firstCard'. If lockBoard variable is true, or 'firstCard' is clicked twice, function exits and no action in taken.
 function flipCard() {
     if (lockBoard) return;
@@ -74,12 +80,38 @@ function resetBoard() {
     });
 })();
 
-// Function tracks number of moves player has taken via tracking checkForMatch function execution.
+// Function tracks number of moves player has taken via tracking checkForMatch function execution. When first move is made, startTimer function executes.
 function moveCounter () {
     moves++;
     counter.innerHTML = moves;
-    console.log(moves);
+    if (moves == 1) {
+        second = 0;
+        minute = 0;
+        hour = 0;
+        startTimer();
+    }
 }
+
+// startTimer function operates ever 1000ms (1 second) and sequentially adds 1 second.
+function startTimer() {
+    interval = setInterval(function() {
+        timer.innerHTML = minute+":"+second;
+        second++;
+        if (second == 60) {
+            minute++;
+            second =0;
+        }
+        if (minute == 60) {
+            hour++;
+            minute = 0;
+        }
+        if (second < 10) {
+            second = "0"+second;
+        }
+    }, 1000);
+}
+
+
 
 // Event Listener to activate 'flipCard' function on click.
 cards.forEach(card => card.addEventListener('click', flipCard));
