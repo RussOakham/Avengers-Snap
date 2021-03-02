@@ -2,9 +2,18 @@
 const cards = document.querySelectorAll('.memory-card');
 
 // Variables for script functionality
-let hasFlippedCard = false; `Variable to determine if card has been flipped or not`
-let lockBoard = false; `Variable to disable card click functions, until non-match cards unflip`
-let firstCard, secondCard; `Variables to determine first and second cards flipped for each match scenario`
+// Variable to determine if card has been flipped or not
+let hasFlippedCard = false;
+
+// Variable to disable card click functions, until non-match cards unflip
+let lockBoard = false;
+
+// Variables to determine first and second cards flipped for each match scenario
+let firstCard, secondCard; 
+
+// Declare move variable for use in moveCounter function and html class to update.
+let moves = 0;
+let counter = document.querySelector(".moves");
 
 // Activate flip card animation on click, via adding 'flip' to class name and setting variable 'firstCard'. If lockBoard variable is true, or 'firstCard' is clicked twice, function exits and no action in taken.
 function flipCard() {
@@ -22,6 +31,7 @@ function flipCard() {
     secondCard = this;
 
     checkForMatch();
+    moveCounter();
 }
 
 // Check if firstCard and secondCard match, if true run disableCards(), if false run unflipCards().
@@ -64,6 +74,12 @@ function resetBoard() {
     });
 })();
 
+// Function tracks number of moves player has taken via tracking checkForMatch function execution.
+function moveCounter () {
+    moves++;
+    counter.innerHTML = moves;
+    console.log(moves);
+}
 
 // Event Listener to activate 'flipCard' function on click.
 cards.forEach(card => card.addEventListener('click', flipCard));
