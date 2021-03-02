@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@300;400;700&display=swap');
 
+/* Global Styling Elements */
 html, body {
   margin:0;
   padding:0;
@@ -17,6 +18,22 @@ body {
     padding-bottom: 140px;
 }
 
+.avengers-banner {
+    height: 20vh;
+    background: url("../images/avengers-logo-removebg.png") center center/contain no-repeat;
+}
+
+.banner-container {
+    margin: 10px auto 10px auto;
+    max-width: 430px;
+    border: solid 2px #000;
+    background-image: radial-gradient(circle, yellow, orange);
+    box-shadow: 0 6px 6px -6px #000;
+    border-radius: .25rem;
+}
+
+
+/* Navbar Styling */
 .navbar {
     font-family: 'Bangers', cursive;
     box-shadow: 0 6px 6px -6px #000;
@@ -32,6 +49,8 @@ body {
     background-color: #e9ecef;
 }
 
+
+/* Footer Styling */
 .footer-section {
     height: 120px;
     background-color: #e9ecef;
@@ -44,24 +63,8 @@ body {
     font-weight: 700;
 }
 
-.banner-container {
-    margin: 10px auto 10px auto;
-    max-width: 430px;
-    border: solid 2px #000;
-    background-image: radial-gradient(circle, yellow, orange);
-    box-shadow: 0 6px 6px -6px #000;
-    border-radius: .25rem;
-}
 
-.game-panel {
-    padding: 5px;
-    height: 600px;
-    border: solid 2px #000;
-    background-image: radial-gradient(circle, yellow, orange);
-    box-shadow: 0 6px 6px -6px #000;
-    border-radius: .25rem;
-}
-
+/* Game Controls Styling */
 .btn-warning {
     background-image: radial-gradient(circle, yellow, orange);
     border: solid 2px #000;
@@ -93,7 +96,24 @@ body {
     padding: .5rem 0 .5rem .5rem;
 }
 
-.avengers-banner {
-    height: 20vh;
-    background: url("../images/shutterstock_1328369057-avengers-logo-removebg.png") center center/contain no-repeat;
+/* Game Styling */
+
+.game-panel {
+    flex-wrap: wrap;
+    display: flex;
+    margin: auto;
+    padding: 5px;
+    height: 640px;
+    border: solid 2px #000;
+    background-image: radial-gradient(circle, yellow, orange);
+    box-shadow: 0 6px 6px -6px #000;
+    border-radius: .25rem;
+}
+
+.memory-card {
+    width: calc(17% - 10px);
+    margin: 5px;
+    position: relative;
+    box-shadow: 0 6px 6px -6px #000;
+    border-radius: .25rem;
 }
