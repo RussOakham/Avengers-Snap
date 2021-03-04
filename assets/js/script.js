@@ -20,6 +20,24 @@ let second = 0, minute = 0;
 var timer = document.querySelector(".timer");
 var interval;
 
+// Function records users difficulty choice
+function diffChoice(event) {
+    difficultyLevel = event.id;
+}
+
+// Function determines number of card pairs required for game based on difficulty chosen
+function noGameCards() {
+    if (difficultyLevel === "easy") {
+        gameCards = 6;
+    }
+    else if (difficultyLevel === "normal"){
+        gameCards = 9;
+    }
+    else if (difficultyLevel === "hard"){
+        gameCards = 12;
+    }
+}
+
 // Activate flip card animation on click, via adding 'flip' to class name and setting variable 'firstCard'. If lockBoard variable is true, or 'firstCard' is clicked twice, function exits and no action in taken.
 function flipCard() {
     if (lockBoard) return;
