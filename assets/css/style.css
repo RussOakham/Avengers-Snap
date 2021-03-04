@@ -18,6 +18,10 @@ body {
     padding-bottom: 140px;
 }
 
+.bangers-font {
+    font-family: 'Bangers', cursive;
+}
+
 .avengers-banner {
     height: 20vh;
     background: url("../images/avengers-logo-removebg.png") center center/contain no-repeat;
@@ -35,7 +39,6 @@ body {
 
 /* Navbar Styling */
 .navbar {
-    font-family: 'Bangers', cursive;
     box-shadow: 0 6px 6px -6px #000;
 }
 .navbar-brand {
@@ -149,16 +152,28 @@ body {
 
 /* Modal Styling */
 .modal-content {
-    background-image: radial-gradient(circle, lightgreen, darkgreen);
+    background-image: radial-gradient(circle, lightcyan, darkcyan);
     font-weight: 600;
     border: solid 2px black;
 }
 
 .modal-title {
-    font-family: 'Bangers', cursive;
+    font-size: 170%;
 }
 
 .modal-header,
 .modal-footer {
     border: 0;
+}
+
+.btn-easy {
+    background-image: radial-gradient(circle, lightgreen, darkgreen);
+}
+
+.btn-medium {
+    background-image: radial-gradient(circle, lightyellow, darkorange);
+}
+
+.btn-hard {
+    background-image: radial-gradient(circle, lightcoral, darkred);
 }
