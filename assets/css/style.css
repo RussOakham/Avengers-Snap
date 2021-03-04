@@ -146,3 +146,19 @@ body {
 .front-face {
     transform: rotateY(180deg);
 }
+
+/* Modal Styling */
+.modal-content {
+    background-image: radial-gradient(circle, lightgreen, darkgreen);
+    font-weight: 600;
+    border: solid 2px black;
+}
+
+.modal-title {
+    font-family: 'Bangers', cursive;
+}
+
+.modal-header,
+.modal-footer {
+    border: 0;
+}
