@@ -20,7 +20,6 @@ let second = 0, minute = 0;
 var timer = document.querySelector(".timer");
 var interval;
 
-
 // Activate flip card animation on click, via adding 'flip' to class name and setting variable 'firstCard'. If lockBoard variable is true, or 'firstCard' is clicked twice, function exits and no action in taken.
 function flipCard() {
     if (lockBoard) return;
@@ -110,7 +109,6 @@ function startTimer() {
         }
     }, 1000);
 }
-
 
 
 // Event Listener to activate 'flipCard' function on click.

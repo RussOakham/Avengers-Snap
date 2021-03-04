@@ -18,8 +18,7 @@
         <header>
             <nav class="navbar navbar-expand-lg navbar-light navbar-colour sticky-top">
                 <div class="container">
-                    <a class="navbar-brand" href="index.html"><img
-                            src="assets/images/Avengers.svg"
+                    <a class="navbar-brand" href="index.html"><img src="assets/images/Avengers.svg"
                             alt="Avengers Snap Logo"></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
@@ -29,7 +28,7 @@
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div class="navbar-nav">
                             <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                            <a class="nav-link" href="#">How To Play</a>
+                            <a class="nav-link" href="#ltp-modal" data-bs-toggle="modal" data-targe="#ltp-modal">How To Play</a>
                             <a class="nav-link" href="#">Avengers</a>
                         </div>
                     </div>
@@ -52,8 +51,8 @@
                     <a class="btn btn-warning" href="#" role="button" aria-label="Difficulty">Difficulty</a>
                 </div>
                 <div class="p-2">
-                    <a class="btn btn-warning" href="#" role="button" aria-label="Reset Game"><i
-                            class="fas fa-redo"></i></a>
+                    <button class="btn btn-warning" href="#" role="button" aria-label="Reset Game"><i
+                            class="fas fa-redo"></i></button>
                 </div>
                 <div class="p-right-0">
                     <a class="btn btn-warning" href="#" role="button" aria-label="Audio Settings"><i
@@ -77,7 +76,7 @@
                 <img class="front-face" src="assets/images/captainamerica.svg" alt="Captain America">
                 <img class="back-face" src="assets/images/Avengers.svg" alt="Avenger Card">
             </div>
-            <div class="memory-card"  data-avenger="captain-america">
+            <div class="memory-card" data-avenger="captain-america">
                 <img class="front-face" src="assets/images/captainamerica.svg" alt="Captain America">
                 <img class="back-face" src="assets/images/Avengers.svg" alt="Avenger Card">
             </div>
@@ -93,7 +92,7 @@
                 <img class="front-face" src="assets/images/groot.svg" alt="Groot">
                 <img class="back-face" src="assets/images/Avengers.svg" alt="Avenger Card">
             </div>
-            <div class="memory-card"  data-avenger="groot">
+            <div class="memory-card" data-avenger="groot">
                 <img class="front-face" src="assets/images/groot.svg" alt="Groot">
                 <img class="back-face" src="assets/images/Avengers.svg" alt="Avenger Card">
             </div>
@@ -101,7 +100,7 @@
                 <img class="front-face" src="assets/images/antman.svg" alt="Antman">
                 <img class="back-face" src="assets/images/Avengers.svg" alt="Avenger Card">
             </div>
-            <div class="memory-card"  data-avenger="antman">
+            <div class="memory-card" data-avenger="antman">
                 <img class="front-face" src="assets/images/antman.svg" alt="Antman">
                 <img class="back-face" src="assets/images/Avengers.svg" alt="Avenger Card">
             </div>
@@ -134,6 +133,34 @@
         </div>
     </section>
 
+    <!-- Modals -->
+    
+    <section id="modals">
+    <!-- 'How to Play' Modal -->
+    <div class="modal fade" id="ltp-modal" tabindex="-1" role="dialog"
+        aria-labelledby="ltp-modal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header justify-content-center">
+                    <h5 class="modal-title" id="exampleModalLongTitle">How To Play</h5>
+                </div>
+                <div class="modal-body text-center">
+                    <p>
+                        Welcome to Avenger's Snap!<br>The memory game based on your favourite Marvel Avengers characters!
+                    </p>
+                    <p>
+                        The aim of the game is simple, match cards via flipping them on the board. Once all cards of flipped - the game is complete! Aim to complete the game in as few moves and as short a time as possible!
+                    </p>
+                    <p>Select one of the difficulty settings below to start the game!</p>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </section>
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.js"
@@ -145,6 +172,7 @@
         integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG"
         crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/modals.js"></script>
 </body>
 
 </html>
