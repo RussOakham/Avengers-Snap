@@ -18,6 +18,10 @@ body {
     padding-bottom: 140px;
 }
 
+.container-max-width {
+    max-width: 700px;
+}
+
 .bangers-font {
     font-family: 'Bangers', cursive;
 }
