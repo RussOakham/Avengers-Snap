@@ -104,7 +104,7 @@ body {
 
 /* Game Styling */
 
-.game-panel {
+#game-panel {
     flex-wrap: wrap;
     display: flex;
     margin: auto;
@@ -115,6 +115,7 @@ body {
     border-radius: .25rem;
     justify-content: center;
     perspective: 1000px;
+    min-height: 320px;
 }
 
 .memory-card {
@@ -143,10 +144,8 @@ body {
 
 .front-face,
 .back-face {
-    width: 100%;
-    height: 100%;
     padding: 10px;
-    position: absolute;
+    position: relative;
     backface-visibility: hidden;
 }
 

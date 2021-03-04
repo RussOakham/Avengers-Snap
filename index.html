@@ -71,47 +71,8 @@
     </section>
 
     <section class="container game-section container-max-width">
-        <div class="game-panel">
-            <div class="memory-card" data-avenger="captain-america">
-                <img class="front-face" src="assets/images/captainamerica.svg" alt="Captain America">
-                <img class="back-face" src="assets/images/Avengers.svg" alt="Avenger Card">
-            </div>
-            <div class="memory-card" data-avenger="captain-america">
-                <img class="front-face" src="assets/images/captainamerica.svg" alt="Captain America">
-                <img class="back-face" src="assets/images/Avengers.svg" alt="Avenger Card">
-            </div>
-            <div class="memory-card" data-avenger="daredevil">
-                <img class="front-face" src="assets/images/daredevil.svg" alt="Daredevil">
-                <img class="back-face" src="assets/images/Avengers.svg" alt="Avenger Card">
-            </div>
-            <div class="memory-card" data-avenger="daredevil">
-                <img class="front-face" src="assets/images/daredevil.svg" alt="Daredevil">
-                <img class="back-face" src="assets/images/Avengers.svg" alt="Avenger Card">
-            </div>
-            <div class="memory-card" data-avenger="groot">
-                <img class="front-face" src="assets/images/groot.svg" alt="Groot">
-                <img class="back-face" src="assets/images/Avengers.svg" alt="Avenger Card">
-            </div>
-            <div class="memory-card" data-avenger="groot">
-                <img class="front-face" src="assets/images/groot.svg" alt="Groot">
-                <img class="back-face" src="assets/images/Avengers.svg" alt="Avenger Card">
-            </div>
-            <div class="memory-card" data-avenger="antman">
-                <img class="front-face" src="assets/images/antman.svg" alt="Antman">
-                <img class="back-face" src="assets/images/Avengers.svg" alt="Avenger Card">
-            </div>
-            <div class="memory-card" data-avenger="antman">
-                <img class="front-face" src="assets/images/antman.svg" alt="Antman">
-                <img class="back-face" src="assets/images/Avengers.svg" alt="Avenger Card">
-            </div>
-            <div class="memory-card" data-avenger="hawkeye">
-                <img class="front-face" src="assets/images/hawkeye.svg" alt="Hawkeye">
-                <img class="back-face" src="assets/images/Avengers.svg" alt="Avenger Card">
-            </div>
-            <div class="memory-card" data-avenger="hawkeye">
-                <img class="front-face" src="assets/images/hawkeye.svg" alt="Hawkeye">
-                <img class="back-face" src="assets/images/Avengers.svg" alt="Avenger Card">
-            </div>
+        <div id="game-panel">
+            
         </div>
     </section>
 
@@ -146,9 +107,9 @@
                     <p>Select a difficulty setting below to start the game!</p>
                 </div>
                 <div class="modal-footer justify-content-center bangers-font">
-                    <button type="button" class="btn btn-warning btn-easy">Easy</button>
-                    <button type="button" class="btn btn-warning btn-medium">Medium</button>
-                    <button type="button" class="btn btn-warning btn-hard">Hard</button>
+                    <button type="button" class="btn btn-warning btn-easy level-btn" onclick="diffChoice(this); startGame()" id="easy">Easy</button>
+                    <button type="button" class="btn btn-warning btn-medium level-btn" onclick="diffChoice(this); startGame()" id="medium">Medium</button>
+                    <button type="button" class="btn btn-warning btn-hard level-btn" onclick="diffChoice(this); startGame()" id="hard">Hard</button>
                 </div>
             </div>
         </div>
