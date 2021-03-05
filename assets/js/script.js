@@ -110,7 +110,6 @@ function flipCard() {
     };
 
     app.secondCard = event.target;
-    console.log(app.secondCard);
     checkMatch();
 }
 
@@ -128,9 +127,12 @@ function checkMatch() {
 
 // Removes 'click' event listener from matched cards.
 function disableCards() {
+    app.lockBoard = true;
+    setTimeout(() => {
     app.firstCard.removeEventListener('click', flipCard);
     app.secondCard.removeEventListener('click', flipCard);
     resetBoard();
+    }, 500);
 };
 
 // unflips non-matched cards after 1500ms and calls resetBoard function.
