@@ -8,6 +8,7 @@ let app = {
     firstCard: '',
     secondCard: '',
     hasFlippedCard: false,
+    lockBoard: false,
 }
 
 // // // Variable to disable card click functions, until non-match cards unflip
@@ -104,6 +105,8 @@ app.game.addEventListener('click', function(event) {
     flipCard();
 })
 
+
+// On click, adds 'flip' to class name and saves clicked div to 'firstCard' variable. If lockBoard variable is true, or 'firstCard' is clicked twice, function exits and no action in taken.
 function flipCard() {
     event.target.classList.add("flip");
 
@@ -115,5 +118,34 @@ function flipCard() {
     };
 
     app.secondCard = event.target;
-    console.log(app.firstCard);
+    console.log(app.secondCard);
+    checkMatch();
+}
+
+// Logic check to see if firstCard dataset and secondCard dataset match.
+// If Match = run disableCards();
+// if NoMatch = run unflipCards();
+
+function checkMatch() {
+    if (app.firstCard.dataset.avenger === app.secondCard.dataset.avenger) {
+        disableCards();
+        console.log(app.firstCard.dataset.avenger);
+        console.log(app.secondCard.dataset.avenger);
+        return;
+    }
+    unflipCards();
+}
+
+
+function disableCards() {
+    app.firstCard.removeEventListener('click', flipCard);
+    app.secondCard.removeEventListener('click', flipCard);
+};
+
+function unflipCards() {
+    app.lockBoard = true;
+    setTimeout(() => {
+        app.firstCard.classList.remove('flip');
+        app.secondCard.classList.remove('flip');
+    }, 1500);
 }
