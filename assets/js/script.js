@@ -14,8 +14,8 @@ let app = {
 // // Variable to determine if card has been flipped or not
 // let hasFlippedCard = false;
 
-// // Variable to disable card click functions, until non-match cards unflip
-// let lockBoard = false;
+// // // Variable to disable card click functions, until non-match cards unflip
+// // let lockBoard = false;
 
 // // Variables to determine first and second cards flipped for each match scenario
 // let firstCard, secondCard;
@@ -97,17 +97,19 @@ document.querySelectorAll(".level-btn").forEach(item => {
 });
 
 
-// // Activate flip card animation on click, via adding 'flip' to class name and setting variable 'firstCard'. If lockBoard variable is true, or 'firstCard' is clicked twice, function exits and no action in taken.
+// Activate flip card animation on click, via adding 'flip' to class name and setting variable 'firstCard'. If lockBoard variable is true, or 'firstCard' is clicked twice, function exits and no action in taken.
 // function flipCard() {
-//     if (lockBoard) return;
+//     // if (lockBoard) return;
 //     if (this === firstCard) return;
 //     this.classList.add('flip');
+//     console.log("flipped")
 
 //     if (!hasFlippedCard) {
 //         hasFlippedCard = true;
 //         firstCard = this;
 //         return;
 //     }
+// }
 
 //     // detects if a card has been flipped and sets new card flip to 'second card', then runs checkForMatch() function.
 //     secondCard = this;
