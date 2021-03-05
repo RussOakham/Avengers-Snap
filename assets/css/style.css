@@ -149,6 +149,7 @@ body {
     backface-visibility: hidden;
     height: 100%;
     width: 100%;
+    pointer-events: none;
 }
 
 .front-face {

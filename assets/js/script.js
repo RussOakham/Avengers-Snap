@@ -75,10 +75,6 @@ function createCardLayout(gameCards) {
         avengerDiv.className = `back-face`
         cardDiv.appendChild(avengerDiv);
     }
-
-    document.querySelectorAll(".memory-card").forEach(item => {
-    item.addEventListener('click', flipCard)
-});
 }
 
 // Function shuffles card deck;
@@ -102,90 +98,16 @@ function startGame() {
     });
 }
 
+// Add click event listeners to difficulty select buttons.
 document.querySelectorAll(".level-btn").forEach(item => {
     item.addEventListener('click', event)
 });
 
 
-// Activate flip card animation on click, via adding 'flip' to class name and setting variable 'firstCard'. If lockBoard variable is true, or 'firstCard' is clicked twice, function exits and no action in taken.
+app.game.addEventListener('click', function(event) {
+    flipCard();
+})
+
 function flipCard() {
-    // if (lockBoard) return;
-    if (this === app.firstCard) return;
-    event.target.classList.add('flip');
-    console.log("flipped")
-
-    if (!hasFlippedCard) {
-        hasFlippedCard = true;
-        app.firstCard = this;
-        return;
-    }
-
-    // detects if a card has been flipped and sets new card flip to 'second card', then runs checkForMatch() function.
-    app.secondCard = this;
-
-    checkForMatch();
-    moveCounter();
-}
-
-// Check if firstCard and secondCard match, if true run disableCards(), if false run unflipCards().
-function checkForMatch() {
-    if (firstCard.dataset.avenger === secondCard.dataset.avenger) {
-        disableCards();
-        return;
-    }
-    unflipCards();
-}
-
-// remove 'click' event listeners from matched cards, so cannot be interacted with.
-function disableCards() {
-    firstCard.removeEventListener('click', flipCard);
-    secondCard.removeEventListener('click', flipCard);
-    resetBoard();
-}
-
-// Unflip cards via removing 'flip' class from card. Function delayed by 1500ms, allowing user time to digest non-match.
-function unflipCards() {
-    lockBoard = true;
-    setTimeout(() => {
-        firstCard.classList.remove('flip');
-        secondCard.classList.remove('flip');
-        resetBoard();
-    }, 1500);
-}
-
-// resetBoard funtion run after disabledCards() and unflipCards() functions, resets board by unlocking the board and wiping firstCard and secondCard variables
-function resetBoard() {
-    [hasFlippedCard, lockBoard] = [false, false];
-    [firstCard, secondCard] = [null, null];
-}
-
-// Function tracks number of moves player has taken via tracking checkForMatch function execution. When first move is made, startTimer function executes.
-function moveCounter() {
-    moves++;
-    counter.innerHTML = moves;
-    if (moves == 1) {
-        second = 0;
-        minute = 0;
-        hour = 0;
-        startTimer();
-    }
-}
-
-// startTimer function operates ever 1000ms (1 second) and sequentially adds 1 second.
-function startTimer() {
-    interval = setInterval(function () {
-        timer.innerHTML = minute + ":" + second;
-        second++;
-        if (second == 60) {
-            minute++;
-            second = 0;
-        }
-        if (minute == 60) {
-            hour++;
-            minute = 0;
-        }
-        if (second < 10) {
-            second = "0" + second;
-        }
-    }, 1000);
+    event.target.classList.add("flip");
 }
