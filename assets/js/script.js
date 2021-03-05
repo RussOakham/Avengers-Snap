@@ -108,6 +108,7 @@ app.game.addEventListener('click', function(event) {
 
 // On click, adds 'flip' to class name and saves clicked div to 'firstCard' variable. If lockBoard variable is true, or 'firstCard' is clicked twice, function exits and no action in taken.
 function flipCard() {
+    if (app.lockBoard) return;
     event.target.classList.add("flip");
 
     if (!app.hasFlippedCard) {
@@ -136,6 +137,7 @@ function checkMatch() {
 function disableCards() {
     app.firstCard.removeEventListener('click', flipCard);
     app.secondCard.removeEventListener('click', flipCard);
+    resetBoard();
 };
 
 // unflips non-matched cards after 1500ms and calls resetBoard function.
@@ -154,12 +156,3 @@ function resetBoard() {
     [app.firstCard, app.secondCard] = [null, null];
 }
 
-function moveCounter() {
-    app.moves++;
-    moveCounter.innerHTML = moves;
-    if (moves == 1) {
-        second = 0;
-        minute = 0;
-        hour = 0;
-    }
-}
