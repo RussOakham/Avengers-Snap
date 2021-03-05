@@ -7,14 +7,8 @@ let app = {
     game: document.getElementById("game-panel"),
     firstCard: '',
     secondCard: '',
+    hasFlippedCard: false,
 }
-
-// // Select all elements with class 'memory-card'
-const playingCards = document.querySelectorAll('.memory-card');
-
-// Variables for script functionality
-// Variable to determine if card has been flipped or not
-let hasFlippedCard = false;
 
 // // // Variable to disable card click functions, until non-match cards unflip
 // // let lockBoard = false;
@@ -51,7 +45,8 @@ function noGameCards() {
 function createCardLayout(gameCards) {
     for (let i = 1; i < app.gameCards + 1; i++) {
         const cardDiv = document.createElement("div");
-        cardDiv.className = 'memory-card'
+        cardDiv.className = 'memory-card',
+        cardDiv.dataset.avenger = `${app.difficultyLevel}avenger${i}`
         app.cardArray.push(cardDiv);
 
         const charDiv = document.createElement("div");
@@ -64,7 +59,8 @@ function createCardLayout(gameCards) {
     }
     for (let j = 1; j < app.gameCards + 1; j++) {
         const cardDiv = document.createElement("div");
-        cardDiv.className = 'memory-card'
+        cardDiv.className = 'memory-card',
+        cardDiv.dataset.avenger = `${app.difficultyLevel}avenger${j}`
         app.cardArray.push(cardDiv);
 
         const charDiv = document.createElement("div");
@@ -103,11 +99,21 @@ document.querySelectorAll(".level-btn").forEach(item => {
     item.addEventListener('click', event)
 });
 
-
+// Add click event listener to cards
 app.game.addEventListener('click', function(event) {
     flipCard();
 })
 
 function flipCard() {
     event.target.classList.add("flip");
+
+    if (!app.hasFlippedCard) {
+        app.hasFlippedCard = true;
+        app.firstCard = event.target;
+        console.log(app.firstCard);
+        return;
+    };
+
+    app.secondCard = event.target;
+    console.log(app.firstCard);
 }
