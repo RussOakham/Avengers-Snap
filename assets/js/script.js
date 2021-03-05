@@ -113,12 +113,10 @@ function flipCard() {
     if (!app.hasFlippedCard) {
         app.hasFlippedCard = true;
         app.firstCard = event.target;
-        console.log(app.firstCard);
         return;
     };
 
     app.secondCard = event.target;
-    console.log(app.secondCard);
     checkMatch();
 }
 
@@ -129,23 +127,29 @@ function flipCard() {
 function checkMatch() {
     if (app.firstCard.dataset.avenger === app.secondCard.dataset.avenger) {
         disableCards();
-        console.log(app.firstCard.dataset.avenger);
-        console.log(app.secondCard.dataset.avenger);
         return;
     }
     unflipCards();
 }
 
-
+// Removes 'click' event listener from matched cards.
 function disableCards() {
     app.firstCard.removeEventListener('click', flipCard);
     app.secondCard.removeEventListener('click', flipCard);
 };
 
+// unflips non-matched cards after 1500ms and calls resetBoard function.
 function unflipCards() {
     app.lockBoard = true;
     setTimeout(() => {
         app.firstCard.classList.remove('flip');
         app.secondCard.classList.remove('flip');
+        resetBoard();
     }, 1500);
+}
+
+// Resets all variables at end of round, ready for new match round to being.
+function resetBoard() {
+    [hasFlippedCard, lockBoard] = [false, false];
+    [firstCard, secondCard] = [null, null];
 }
