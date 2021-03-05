@@ -53,13 +53,21 @@ function noGameCards() {
 function createCardLayout(gameCards) {
     for (let i = 1; i < app.gameCards + 1; i++) {
         const cardDiv = document.createElement("div");
-        cardDiv.className = `memory-card back-face ${app.difficultyLevel}avenger${i}`
+        cardDiv.className = 'memory-card'
         app.cardArray.push(cardDiv);
+
+        const avengerDiv = document.createElement("div");
+        avengerDiv.className = `back-face ${app.difficultyLevel}avenger${i}`
+        cardDiv.appendChild(avengerDiv);
     }
     for (let j = 1; j < app.gameCards + 1; j++) {
         const cardDiv = document.createElement("div");
-        cardDiv.className = `memory-card back-face ${app.difficultyLevel}avenger${j}`
+        cardDiv.className = 'memory-card'
         app.cardArray.push(cardDiv);
+
+        const avengerDiv = document.createElement("div");
+        avengerDiv.className = `back-face ${app.difficultyLevel}avenger${j}`
+        cardDiv.appendChild(avengerDiv);
     }
 }
 

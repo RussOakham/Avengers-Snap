@@ -149,6 +149,13 @@ body {
     backface-visibility: hidden;
 }
 
+.back-face {
+    background: url('../images/Avengers.svg') no-repeat center;
+    background-size: 75%;
+    height: 100%;
+    width: 100%;
+}
+
 .front-face {
     transform: rotateY(180deg);
 }
