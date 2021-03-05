@@ -1,5 +1,4 @@
 // Global variables stored in app object for code cleanliness.
-
 let app = {
     gameCards: 0,
     difficultyLevel: 0,
@@ -9,19 +8,14 @@ let app = {
     secondCard: '',
     hasFlippedCard: false,
     lockBoard: false,
+    moves: 0,
+    counter: document.querySelector('.moves'),
+    second: 0,
+    minute: 0,
+    timer: document.querySelector(".timer"),
+    interval: '',
 }
 
-// // // Variable to disable card click functions, until non-match cards unflip
-// // let lockBoard = false;
-
-// // Declare move variable for use in moveCounter function and html class to update.
-// let moves = 0;
-// let counter = document.querySelector(".moves");
-
-// // Variables for game timer
-// let second = 0, minute = 0;
-// var timer = document.querySelector(".timer");
-// var interval;
 
 // Function records users difficulty choice
 function diffChoice(event) {
@@ -40,7 +34,6 @@ function noGameCards() {
         app.gameCards = 12;
     }
 }
-
 
 // Create Cards and card layout
 function createCardLayout(gameCards) {
@@ -75,7 +68,6 @@ function createCardLayout(gameCards) {
 }
 
 // Function shuffles card deck;
-
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -105,10 +97,10 @@ app.game.addEventListener('click', function(event) {
     flipCard();
 })
 
-
 // On click, adds 'flip' to class name and saves clicked div to 'firstCard' variable. If lockBoard variable is true, or 'firstCard' is clicked twice, function exits and no action in taken.
 function flipCard() {
     if (app.lockBoard) return;
+    if (event.target === app.firstCard) return;
     event.target.classList.add("flip");
 
     if (!app.hasFlippedCard) {
@@ -118,6 +110,7 @@ function flipCard() {
     };
 
     app.secondCard = event.target;
+    console.log(app.secondCard);
     checkMatch();
 }
 
