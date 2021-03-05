@@ -150,6 +150,16 @@ function unflipCards() {
 
 // Resets all variables at end of round, ready for new match round to being.
 function resetBoard() {
-    [hasFlippedCard, lockBoard] = [false, false];
-    [firstCard, secondCard] = [null, null];
+    [app.hasFlippedCard, app.lockBoard] = [false, false];
+    [app.firstCard, app.secondCard] = [null, null];
+}
+
+function moveCounter() {
+    app.moves++;
+    moveCounter.innerHTML = moves;
+    if (moves == 1) {
+        second = 0;
+        minute = 0;
+        hour = 0;
+    }
 }
