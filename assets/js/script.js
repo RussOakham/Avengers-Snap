@@ -87,11 +87,6 @@ function startGame() {
     });
 }
 
-// Add click event listeners to difficulty select buttons.
-document.querySelectorAll(".level-btn").forEach(item => {
-    item.addEventListener('click', event)
-});
-
 // Add click event listener to cards
 app.game.addEventListener('click', function(event) {
     flipCard();
@@ -100,6 +95,7 @@ app.game.addEventListener('click', function(event) {
 // On click, adds 'flip' to class name and saves clicked div to 'firstCard' variable. If lockBoard variable is true, or 'firstCard' is clicked twice, function exits and no action in taken.
 function flipCard() {
     if (app.lockBoard) return;
+    if (event.target === document.getElementById('game-panel')) return;
     if (event.target === app.firstCard) return;
     event.target.classList.add("flip");
 
@@ -150,4 +146,12 @@ function resetBoard() {
     [app.hasFlippedCard, app.lockBoard] = [false, false];
     [app.firstCard, app.secondCard] = [null, null];
 }
+
+
+// Add click event listeners to difficulty select buttons.
+document.querySelectorAll(".level-btn").forEach(item => {
+    item.addEventListener('click', event)
+});
+
+
 
