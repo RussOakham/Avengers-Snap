@@ -12,6 +12,7 @@ let app = {
     counter: document.querySelector('.moves'),
     second: 0,
     minute: 0,
+    hour: 0,
     timer: document.querySelector(".timer"),
     interval: '',
 }
@@ -40,7 +41,7 @@ function createCardLayout(gameCards) {
     for (let i = 1; i < app.gameCards + 1; i++) {
         const cardDiv = document.createElement("div");
         cardDiv.className = 'memory-card',
-        cardDiv.dataset.avenger = `${app.difficultyLevel}avenger${i}`
+            cardDiv.dataset.avenger = `${app.difficultyLevel}avenger${i}`
         app.cardArray.push(cardDiv);
 
         const charDiv = document.createElement("div");
@@ -54,13 +55,13 @@ function createCardLayout(gameCards) {
     for (let j = 1; j < app.gameCards + 1; j++) {
         const cardDiv = document.createElement("div");
         cardDiv.className = 'memory-card',
-        cardDiv.dataset.avenger = `${app.difficultyLevel}avenger${j}`
+            cardDiv.dataset.avenger = `${app.difficultyLevel}avenger${j}`
         app.cardArray.push(cardDiv);
 
         const charDiv = document.createElement("div");
         charDiv.className = `${app.difficultyLevel}avenger${j} front-face`
         cardDiv.appendChild(charDiv);
-    
+
         const avengerDiv = document.createElement("div");
         avengerDiv.className = `back-face`
         cardDiv.appendChild(avengerDiv);
@@ -88,7 +89,7 @@ function startGame() {
 }
 
 // Add click event listener to cards
-app.game.addEventListener('click', function(event) {
+app.game.addEventListener('click', function (event) {
     flipCard();
 })
 
@@ -126,9 +127,9 @@ function checkMatch() {
 function disableCards() {
     app.lockBoard = true;
     setTimeout(() => {
-    app.firstCard.removeEventListener('click', flipCard);
-    app.secondCard.removeEventListener('click', flipCard);
-    resetBoard();
+        app.firstCard.removeEventListener('click', flipCard);
+        app.secondCard.removeEventListener('click', flipCard);
+        resetBoard();
     }, 500);
 };
 
@@ -159,6 +160,32 @@ document.querySelectorAll(".level-btn").forEach(item => {
 function moveCounter() {
     app.moves++;
     app.counter.innerHTML = app.moves;
+    if (app.moves == 1) {
+        app.second = 0;
+        app.minute = 0;
+        app.hour = 0;
+        startTimer();
+    }
+}
+
+
+function startTimer() {
+    interval = setInterval(function () {
+        app.timer.innerHTML = app.minute + ':' + app.second;
+        app.second++;
+        if (app.second == 60) {
+            app.minute++;
+            app.second = 0;
+        }
+        if (app.minute == 60) {
+            app.hour++;
+            app.minute = 0;
+        }
+        if (app.second < 10) {
+            app.second = '0' + app.second;
+        }
+    }, 1000);
+    console.log('test');
 }
 
 
