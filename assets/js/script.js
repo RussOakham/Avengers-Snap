@@ -92,7 +92,7 @@ app.game.addEventListener('click', function(event) {
     flipCard();
 })
 
-// On click, adds 'flip' to class name and saves clicked div to 'firstCard' variable. If lockBoard variable is true, or 'firstCard' is clicked twice, function exits and no action in taken.
+// On click, adds 'flip' to class name and saves clicked div to 'firstCard' variable. If lockBoard variable is true, 'firstCard' is clicked twice, or yellow 'game-panel' is clicked, function exits and no action in taken. Once secondCard is selected, checkMatch and moveCounter functions are called.
 function flipCard() {
     if (app.lockBoard) return;
     if (event.target === document.getElementById('game-panel')) return;
@@ -107,6 +107,7 @@ function flipCard() {
 
     app.secondCard = event.target;
     checkMatch();
+    moveCounter();
 }
 
 // Logic check to see if firstCard dataset and secondCard dataset match.
@@ -138,7 +139,7 @@ function unflipCards() {
         app.firstCard.classList.remove('flip');
         app.secondCard.classList.remove('flip');
         resetBoard();
-    }, 1500);
+    }, 1000);
 }
 
 // Resets all variables at end of round, ready for new match round to being.
@@ -152,6 +153,13 @@ function resetBoard() {
 document.querySelectorAll(".level-btn").forEach(item => {
     item.addEventListener('click', event)
 });
+
+
+// Add 1 increment to app.moves tally. Function called at end of secondCard part of flipCard() function.
+function moveCounter() {
+    app.moves++;
+    app.counter.innerHTML = app.moves;
+}
 
 
 
