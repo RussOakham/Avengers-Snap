@@ -1,134 +1,192 @@
-// Select all elements with class 'memory-card'
-const cards = document.querySelectorAll('.memory-card');
+// Global variables stored in app object for code cleanliness.
+let app = {
+    gameCards: 0,
+    difficultyLevel: 0,
+    cardArray: [],
+    game: document.getElementById("game-panel"),
+    firstCard: '',
+    secondCard: '',
+    hasFlippedCard: false,
+    lockBoard: false,
+    moves: 0,
+    counter: document.querySelector('.moves'),
+    second: 0,
+    minute: 0,
+    hour: 0,
+    timer: document.querySelector(".timer"),
+    interval: '',
+}
 
-// Variables for script functionality
-// Variable to determine if card has been flipped or not
-let hasFlippedCard = false;
-
-// Variable to disable card click functions, until non-match cards unflip
-let lockBoard = false;
-
-// Variables to determine first and second cards flipped for each match scenario
-let firstCard, secondCard; 
-
-// Declare move variable for use in moveCounter function and html class to update.
-let moves = 0;
-let counter = document.querySelector(".moves");
-
-// Variables for game timer
-let second = 0, minute = 0;
-var timer = document.querySelector(".timer");
-var interval;
 
 // Function records users difficulty choice
 function diffChoice(event) {
-    difficultyLevel = event.id;
+    app.difficultyLevel = event.id;;
 }
 
 // Function determines number of card pairs required for game based on difficulty chosen
 function noGameCards() {
-    if (difficultyLevel === "easy") {
-        gameCards = 6;
+    if (app.difficultyLevel === "easy") {
+        app.gameCards = 6;
     }
-    else if (difficultyLevel === "normal"){
-        gameCards = 9;
+    else if (app.difficultyLevel === "medium") {
+        app.gameCards = 9;
     }
-    else if (difficultyLevel === "hard"){
-        gameCards = 12;
+    else if (app.difficultyLevel === "hard") {
+        app.gameCards = 12;
     }
 }
 
-// Activate flip card animation on click, via adding 'flip' to class name and setting variable 'firstCard'. If lockBoard variable is true, or 'firstCard' is clicked twice, function exits and no action in taken.
-function flipCard() {
-    if (lockBoard) return;
-    if (this === firstCard) return;
-    this.classList.add('flip');
+// Create Cards and card layout
+function createCardLayout(gameCards) {
+    for (let i = 1; i < app.gameCards + 1; i++) {
+        const cardDiv = document.createElement("div");
+        cardDiv.className = 'memory-card',
+            cardDiv.dataset.avenger = `${app.difficultyLevel}avenger${i}`
+        app.cardArray.push(cardDiv);
 
-    if (!hasFlippedCard) {
-        hasFlippedCard = true;
-        firstCard = this;
-        return;
+        const charDiv = document.createElement("div");
+        charDiv.className = `${app.difficultyLevel}avenger${i} front-face`
+        cardDiv.appendChild(charDiv);
+
+        const avengerDiv = document.createElement("div");
+        avengerDiv.className = `back-face`
+        cardDiv.appendChild(avengerDiv);
     }
+    for (let j = 1; j < app.gameCards + 1; j++) {
+        const cardDiv = document.createElement("div");
+        cardDiv.className = 'memory-card',
+            cardDiv.dataset.avenger = `${app.difficultyLevel}avenger${j}`
+        app.cardArray.push(cardDiv);
 
-    // detects if a card has been flipped and sets new card flip to 'second card', then runs checkForMatch() function.
-    secondCard = this;
+        const charDiv = document.createElement("div");
+        charDiv.className = `${app.difficultyLevel}avenger${j} front-face`
+        cardDiv.appendChild(charDiv);
 
-    checkForMatch();
+        const avengerDiv = document.createElement("div");
+        avengerDiv.className = `back-face`
+        cardDiv.appendChild(avengerDiv);
+    }
+}
+
+// Function shuffles card deck;
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+
+// Create Game Card Board
+function startGame() {
+    noGameCards();
+    createCardLayout(app.gameCards);
+    let cards = shuffleArray(app.cardArray);
+
+    cards.forEach(element => {
+        app.game.appendChild(element);
+    });
+}
+
+// Add click event listener to cards
+app.game.addEventListener('click', function (event) {
+    flipCard();
+})
+
+// On click, adds 'flip' to class name and saves clicked div to 'firstCard' variable. If lockBoard variable is true, 'firstCard' is clicked twice, or yellow 'game-panel' is clicked, function exits and no action in taken. Once secondCard is selected, checkMatch and moveCounter functions are called.
+function flipCard() {
+    if (app.lockBoard) return;
+    if (event.target === document.getElementById('game-panel')) return;
+    if (event.target === app.firstCard) return;
+    event.target.classList.add("flip");
+
+    if (!app.hasFlippedCard) {
+        app.hasFlippedCard = true;
+        app.firstCard = event.target;
+        return;
+    };
+
+    app.secondCard = event.target;
+    checkMatch();
     moveCounter();
 }
 
-// Check if firstCard and secondCard match, if true run disableCards(), if false run unflipCards().
-function checkForMatch() {
-    if (firstCard.dataset.avenger === secondCard.dataset.avenger) {
+// Logic check to see if firstCard dataset and secondCard dataset match.
+// If Match = run disableCards();
+// if NoMatch = run unflipCards();
+
+function checkMatch() {
+    if (app.firstCard.dataset.avenger === app.secondCard.dataset.avenger) {
         disableCards();
         return;
     }
-    unflipCards();    
+    unflipCards();
 }
 
-// remove 'click' event listeners from matched cards, so cannot be interacted with.
+// Removes 'click' event listener from matched cards.
 function disableCards() {
-    firstCard.removeEventListener('click', flipCard);
-    secondCard.removeEventListener('click', flipCard);
-    resetBoard();
-}
-
-// Unflip cards via removing 'flip' class from card. Function delayed by 1500ms, allowing user time to digest non-match.
-function unflipCards() {
-    lockBoard = true;
+    app.lockBoard = true;
     setTimeout(() => {
-        firstCard.classList.remove('flip');
-        secondCard.classList.remove('flip');
+        app.firstCard.removeEventListener('click', flipCard);
+        app.secondCard.removeEventListener('click', flipCard);
         resetBoard();
-    }, 1500);
+    }, 500);
+};
+
+// unflips non-matched cards after 1500ms and calls resetBoard function.
+function unflipCards() {
+    app.lockBoard = true;
+    setTimeout(() => {
+        app.firstCard.classList.remove('flip');
+        app.secondCard.classList.remove('flip');
+        resetBoard();
+    }, 1000);
 }
 
-// resetBoard funtion run after disabledCards() and unflipCards() functions, resets board by unlocking the board and wiping firstCard and secondCard variables
+// Resets all variables at end of round, ready for new match round to being.
 function resetBoard() {
-    [hasFlippedCard, lockBoard] = [false, false];
-    [firstCard, secondCard] = [null, null];
+    [app.hasFlippedCard, app.lockBoard] = [false, false];
+    [app.firstCard, app.secondCard] = [null, null];
 }
 
-// Shuffles cards by applying a random numbers from 1-12 to each cards 'order' property, flex-items automatically arranged by this. Designated as a Immediately Invoked Function Expression (IIFE), so will execute as soon as declared in browser
-(function shuffleBoard() {
-    cards.forEach(card => {
-        let randomPos = Math.floor(Math.random() * 12);
-        card.style.order = randomPos;
-    });
-})();
 
-// Function tracks number of moves player has taken via tracking checkForMatch function execution. When first move is made, startTimer function executes.
-function moveCounter () {
-    moves++;
-    counter.innerHTML = moves;
-    if (moves == 1) {
-        second = 0;
-        minute = 0;
-        hour = 0;
+// Add click event listeners to difficulty select buttons.
+document.querySelectorAll(".level-btn").forEach(item => {
+    item.addEventListener('click', event)
+});
+
+
+// Add 1 increment to app.moves tally. Function called at end of secondCard part of flipCard() function.
+function moveCounter() {
+    app.moves++;
+    app.counter.innerHTML = app.moves;
+    if (app.moves == 1) {
+        app.second = 0;
+        app.minute = 0;
+        app.hour = 0;
         startTimer();
     }
 }
 
-// startTimer function operates ever 1000ms (1 second) and sequentially adds 1 second.
+
 function startTimer() {
-    interval = setInterval(function() {
-        timer.innerHTML = minute+":"+second;
-        second++;
-        if (second == 60) {
-            minute++;
-            second =0;
+    interval = setInterval(function () {
+        app.timer.innerHTML = app.minute + ':' + app.second;
+        app.second++;
+        if (app.second == 60) {
+            app.minute++;
+            app.second = 0;
         }
-        if (minute == 60) {
-            hour++;
-            minute = 0;
+        if (app.minute == 60) {
+            app.hour++;
+            app.minute = 0;
         }
-        if (second < 10) {
-            second = "0"+second;
+        if (app.second < 10) {
+            app.second = '0' + app.second;
         }
     }, 1000);
+    console.log('test');
 }
 
 
-// Event Listener to activate 'flipCard' function on click.
-cards.forEach(card => card.addEventListener('click', flipCard));
 

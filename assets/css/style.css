@@ -104,7 +104,7 @@ body {
 
 /* Game Styling */
 
-.game-panel {
+#game-panel {
     flex-wrap: wrap;
     display: flex;
     margin: auto;
@@ -115,6 +115,7 @@ body {
     border-radius: .25rem;
     justify-content: center;
     perspective: 1000px;
+    min-height: 320px;
 }
 
 .memory-card {
@@ -143,16 +144,84 @@ body {
 
 .front-face,
 .back-face {
-    width: 100%;
-    height: 100%;
     padding: 10px;
     position: absolute;
     backface-visibility: hidden;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
 }
 
 .front-face {
     transform: rotateY(180deg);
 }
+
+.easyavenger1,
+.mediumavenger1,
+.hardavenger1 {
+    background: url('../images/antman.svg') no-repeat center;
+}
+
+.easyavenger2,
+.mediumavenger2,
+.hardavenger2 {
+    background: url('../images/captainamerica.svg') no-repeat center;
+}
+
+.easyavenger3,
+.mediumavenger3,
+.hardavenger3 {
+    background: url('../images/daredevil.svg') no-repeat center;
+}
+
+.easyavenger4,
+.mediumavenger4,
+.hardavenger4 {
+    background: url('../images/groot.svg') no-repeat center;
+}
+
+.easyavenger5,
+.mediumavenger5,
+.hardavenger5 {
+    background: url('../images/hawkeye.svg') no-repeat center;
+}
+
+.easyavenger6,
+.mediumavenger6,
+.hardavenger6 {
+    background: url('../images/ironman.svg') no-repeat center;
+}
+
+.easyavenger7,
+.mediumavenger7,
+.hardavenger7 {
+    background: url('../images/spiderman.svg') no-repeat center;
+}
+
+.easyavenger8,
+.mediumavenger8,
+.hardavenger8 {
+    background: url('../images/thanos.svg') no-repeat center;
+}
+
+.easyavenger9,
+.mediumavenger9,
+.hardavenger9 {
+    background: url('../images/thor.svg') no-repeat center;
+}
+
+.easyavenger10,
+.mediumavenger10,
+.hardavenger10 {
+    background: url('../images/wolverine.svg') no-repeat center;
+}
+
+.back-face {
+    background: url('../images/Avengers.svg') no-repeat center;
+    background-size: 75%;
+}
+
+/* Playing Card Styling */
 
 /* Modal Styling */
 .modal-content {
