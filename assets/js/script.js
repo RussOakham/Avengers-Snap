@@ -171,7 +171,7 @@ function moveCounter() {
 
 
 function startTimer() {
-    interval = setInterval(function () {
+    app.interval = setInterval(function () {
         app.timer.innerHTML = app.minute + ':' + app.second;
         app.second++;
         if (app.second == 60) {
@@ -195,4 +195,11 @@ function resetGame() {
     app.cardArray = [];
     app.firstCard = '';
     app.secondCard = '';
+    app.moves = 0;
+    app.second = 0;
+    app.minute = 0;
+    app.hour = 0;
+    clearInterval(app.interval);
+    app.counter.innerHTML = "0";
+    app.timer.innerHTML = "0:00";
 }
