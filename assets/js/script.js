@@ -2,6 +2,7 @@
 let app = {
     gameCards: 0,
     difficultyLevel: 0,
+    diffLevel: document.getElementById('diff-level'),
     cardArray: [],
     game: document.getElementById("game-panel"),
     firstCard: '',
@@ -10,10 +11,12 @@ let app = {
     lockBoard: false,
     moves: 0,
     counter: document.querySelector('.moves'),
+    moveScore: document.getElementById('move-score'),
     second: 0,
     minute: 0,
     hour: 0,
     timer: document.querySelector(".timer"),
+    timeScore: document.getElementById("time-score"),
     interval: '',
     matchedCards: [],
     victoryModal: document.getElementById('congrats-modal'),
@@ -230,7 +233,7 @@ function resetCurrentGame() {
     startGame();
 }
 
-
+// Function determines if game is complete by testing if number of paired cards equals number of gameCard pairs generated. If SourceBuffer, then timer is stopped via clearing internal and congratulations modal is called
 function gameComplete() {
     if (app.matchedCards.length === app.gameCards) {
         clearInterval(app.interval);
