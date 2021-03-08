@@ -112,6 +112,7 @@ function flipCard() {
     if (event.target === document.getElementById('game-panel')) return;
     if (event.target === app.firstCard) return;
     event.target.classList.add("flip");
+    cardFlipSound();
 
     if (!app.hasFlippedCard) {
         app.hasFlippedCard = true;
@@ -130,6 +131,7 @@ function flipCard() {
 function checkMatch() {
     if (app.firstCard.dataset.avenger === app.secondCard.dataset.avenger) {
         disableCards();
+        cardMatchSound();
         app.matchedCards.push(app.firstCard.dataset.avenger);
         gameComplete();
         return;
@@ -154,6 +156,7 @@ function unflipCards() {
         app.firstCard.classList.remove('flip');
         app.secondCard.classList.remove('flip');
         resetBoard();
+        cardNoMatchSound();
     }, 1000);
 }
 

@@ -4,3 +4,15 @@ let audio = {
     cardMatchAudio: new Audio("assets/audio/card-match.mp3"),
     cardNoMatchAudio: new Audio("assets/audio/card-no-match.mp3"),
 }
+
+function cardFlipSound() {
+    audio.cardFlipAudio.play();
+}
+
+function cardMatchSound() {
+    audio.cardMatchAudio.play();
+}
+
+function cardNoMatchSound() {
+    audio.cardNoMatchAudio.play();
+}
