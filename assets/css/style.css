@@ -157,62 +157,92 @@ body {
 }
 
 .easyavenger1,
+.easy2avenger1,
 .mediumavenger1,
-.hardavenger1 {
+.medium2avenger1,
+.hardavenger1,
+.hard2avenger1 {
     background: url('../images/antman.svg') no-repeat center;
 }
 
 .easyavenger2,
+.easy2avenger2,
 .mediumavenger2,
-.hardavenger2 {
+.medium2avenger2,
+.hardavenger2,
+.hard2avenger2 {
     background: url('../images/captainamerica.svg') no-repeat center;
 }
 
 .easyavenger3,
+.easy2avenger3,
 .mediumavenger3,
-.hardavenger3 {
+.medium2avenger3,
+.hardavenger3,
+.hard2avenger3 {
     background: url('../images/daredevil.svg') no-repeat center;
 }
 
 .easyavenger4,
+.easy2avenger4,
 .mediumavenger4,
-.hardavenger4 {
+.medium2avenger4,
+.hardavenger4,
+.hard2avenger4 {
     background: url('../images/groot.svg') no-repeat center;
 }
 
 .easyavenger5,
+.easy2avenger5,
 .mediumavenger5,
-.hardavenger5 {
+.medium2avenger5,
+.hardavenger5,
+.hard2avenger5 {
     background: url('../images/hawkeye.svg') no-repeat center;
 }
 
 .easyavenger6,
+.easy2avenger6,
 .mediumavenger6,
-.hardavenger6 {
+.medium2avenger6,
+.hardavenger6,
+.hard2avenger6 {
     background: url('../images/ironman.svg') no-repeat center;
 }
 
 .easyavenger7,
+.easy2avenger7,
 .mediumavenger7,
-.hardavenger7 {
+.medium2avenger7,
+.hardavenger7,
+.hard2avenger7 {
     background: url('../images/spiderman.svg') no-repeat center;
 }
 
 .easyavenger8,
+.easy2avenger8,
 .mediumavenger8,
-.hardavenger8 {
+.medium2avenger8,
+.hardavenger8,
+.hard2avenger8 {
     background: url('../images/thanos.svg') no-repeat center;
 }
 
 .easyavenger9,
+.easy2avenger9,
 .mediumavenger9,
-.hardavenger9 {
+.medium2avenger9,
+.hardavenger9,
+.hard2avenger9 {
     background: url('../images/thor.svg') no-repeat center;
 }
 
 .easyavenger10,
+.easy2avenger10,
 .mediumavenger10,
-.hardavenger10 {
+.medium2avenger10,
+.hardavenger10,
+.hard2avenger10 {
     background: url('../images/wolverine.svg') no-repeat center;
 }
 
