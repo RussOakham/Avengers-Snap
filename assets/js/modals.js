@@ -16,8 +16,14 @@ function congratsModal() {
     $('#congrats-modal').modal('show');
 }
 
+function audioModal() {
+    $('#audio-modal').modal('show');
+}
+
 function closeModals() {
     $('#ltp-modal').modal('hide');
     $('#congrats-modal').modal('hide');
+    $('#audio-modal').modal('hide');
 }
 
+$('#sound-toggle').button('toggle')

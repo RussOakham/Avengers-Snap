@@ -10,6 +10,7 @@
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
         integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -28,7 +29,8 @@
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div class="navbar-nav">
                             <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                            <a class="nav-link" href="#ltp-modal" data-bs-toggle="modal" data-target="#ltp-modal">How To Play</a>
+                            <a class="nav-link" href="#ltp-modal" data-bs-toggle="modal" data-target="#ltp-modal">How To
+                                Play</a>
                             <a class="nav-link" href="#">Avengers</a>
                         </div>
                     </div>
@@ -48,14 +50,16 @@
         <div class="flex-column d-flex align-items-center flex-sm-row justify-content-sm-between">
             <div class="d-flex">
                 <div class="p-left-0">
-                    <a class="btn btn-warning" href="#ltp-modal" data-target="#ltp-modal" data-bs-toggle="modal" role="button" aria-label="Difficulty">Difficulty</a>
+                    <a class="btn btn-warning" href="#ltp-modal" data-target="#ltp-modal" data-bs-toggle="modal"
+                        role="button" aria-label="Difficulty">Difficulty</a>
                 </div>
                 <div class="p-2">
-                    <button class="btn btn-warning" onclick="resetCurrentGame ()" id="reset-btn" role="button" aria-label="Reset Game"><i
-                            class="fas fa-redo"></i></button>
+                    <button class="btn btn-warning" onclick="resetCurrentGame()" id="reset-btn" role="button"
+                        aria-label="Reset Game"><i class="fas fa-redo"></i></button>
                 </div>
                 <div class="p-right-0">
-                    <a class="btn btn-warning" href="#" role="button" aria-label="Audio Settings"><i
+                    <a class="btn btn-warning" href="#audio-modal" data-target="#audio-modal" data-bs-target="modal"
+                        role="button" aria-label="Audio Controls" onclick="audioModal()"><i
                             class="fas fa-music"></i></a>
                 </div>
             </div>
@@ -72,7 +76,7 @@
 
     <section class="container game-section container-max-width">
         <div id="game-panel">
-            
+
         </div>
     </section>
 
@@ -87,60 +91,95 @@
     </section>
 
     <!-- Modals -->
-    
-    <section id="modals">
-    <!-- 'How to Play' Modal -->
-    <div class="modal fade" id="ltp-modal" tabindex="-1" role="dialog"
-        aria-labelledby="ltp-modal" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header justify-content-center">
-                    <h5 class="modal-title bangers-font" id="how-to-play-title">How To Play</h5>
-                </div>
-                <div class="modal-body text-center">
-                    <p>
-                        Welcome to Avenger's Snap!<br>The memory game based on your favourite Marvel Avengers characters!
-                    </p>
-                    <p>
-                        The aim of the game is simple, match two cards via flipping them on the game board.<br>Once all cards are flipped - the game is complete!<br>Aim to complete the game in as few moves and as short a time as possible!
-                    </p>
-                    <p>Select a difficulty setting below to start the game!</p>
-                </div>
-                <div class="modal-footer justify-content-center bangers-font">
-                    <button type="button" class="btn btn-warning btn-easy level-btn" onclick="diffChoice(this); startGame()" id="easy">Easy</button>
-                    <button type="button" class="btn btn-warning btn-medium level-btn" onclick="diffChoice(this); startGame()" id="medium">Medium</button>
-                    <button type="button" class="btn btn-warning btn-hard level-btn" onclick="diffChoice(this); startGame()" id="hard">Hard</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- 'Congratulations' Modal -->
-    <div class="modal fade" id="congrats-modal" tabindex="-1" role="dialog"
-        aria-labelledby="congrats-modal" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header justify-content-center">
-                    <h5 class="modal-title bangers-font" id="congratulations-title">Congratulations!</h5>
-                </div>
-                <div class="modal-body text-center">
-                    <p>
-                        You've completed Avenger's Snap!<br>
-                    </p>
-                    <p>
-                        You made <span id="move-score"></span> moves!<br>You took <span id="time-score"></span>
-                    </p>
-                    <p>Why not try again on a higher difficulty?<br>Or aim to repeat the current level in less moves and time!</p>
-                    <p>Select a difficulty setting below to start a new game!</p>
-                </div>
-                <div class="modal-footer justify-content-center bangers-font">
-                    <button type="button" class="btn btn-warning btn-easy level-btn" onclick="diffChoice(this); startGame()" id="easy2">Easy</button>
-                    <button type="button" class="btn btn-warning btn-medium level-btn" onclick="diffChoice(this); startGame()" id="medium2">Medium</button>
-                    <button type="button" class="btn btn-warning btn-hard level-btn" onclick="diffChoice(this); startGame()" id="hard2">Hard</button>
+    <section id="modals">
+        <!-- 'How to Play' Modal -->
+        <div class="modal fade" id="ltp-modal" tabindex="-1" role="dialog" aria-labelledby="ltp-modal"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header justify-content-center">
+                        <h5 class="modal-title bangers-font" id="how-to-play-title">How To Play</h5>
+                    </div>
+                    <div class="modal-body text-center">
+                        <p>
+                            Welcome to Avenger's Snap!<br>The memory game based on your favourite Marvel Avengers
+                            characters!
+                        </p>
+                        <p>
+                            The aim of the game is simple, match two cards via flipping them on the game board.<br>Once
+                            all cards are flipped - the game is complete!<br>Aim to complete the game in as few moves
+                            and as short a time as possible!
+                        </p>
+                        <p>Select a difficulty setting below to start the game!</p>
+                    </div>
+                    <div class="modal-footer justify-content-center bangers-font">
+                        <button type="button" class="btn btn-warning btn-easy level-btn"
+                            onclick="diffChoice(this); startGame()" id="easy">Easy</button>
+                        <button type="button" class="btn btn-warning btn-medium level-btn"
+                            onclick="diffChoice(this); startGame()" id="medium">Medium</button>
+                        <button type="button" class="btn btn-warning btn-hard level-btn"
+                            onclick="diffChoice(this); startGame()" id="hard">Hard</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+
+        <!-- 'Congratulations' Modal -->
+        <div class="modal fade" id="congrats-modal" tabindex="-1" role="dialog" aria-labelledby="congrats-modal"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header justify-content-center">
+                        <h5 class="modal-title bangers-font" id="congratulations-title">Congratulations!</h5>
+                    </div>
+                    <div class="modal-body text-center">
+                        <p>
+                            You've completed Avenger's Snap!<br>
+                        </p>
+                        <p>
+                            You made <span id="move-score"></span> moves!<br>You took <span id="time-score"></span>
+                        </p>
+                        <p>Why not try again on a higher difficulty?<br>Or aim to repeat the current level in less moves
+                            and time!</p>
+                        <p>Select a difficulty setting below to start a new game!</p>
+                    </div>
+                    <div class="modal-footer justify-content-center bangers-font">
+                        <button type="button" class="btn btn-warning btn-easy level-btn"
+                            onclick="diffChoice(this); startGame()" id="easy2">Easy</button>
+                        <button type="button" class="btn btn-warning btn-medium level-btn"
+                            onclick="diffChoice(this); startGame()" id="medium2">Medium</button>
+                        <button type="button" class="btn btn-warning btn-hard level-btn"
+                            onclick="diffChoice(this); startGame()" id="hard2">Hard</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Audio Controls Modal -->
+        <div class="modal fade" id="audio-modal" tabindex="-1" role="dialog" aria-labelledby="audio-modal"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header justify-content-center">
+                        <h5 class="modal-title bangers-font" id="audio-title">Sound Effects</h5>
+                    </div>
+                    <div class="modal-body text-center">
+                        <p>
+                            Adjust volume or turn on/off sound effects below:
+                        </p>
+                        <label for="volume-slider"><strong>Volume:</strong></label>
+                        <input type="range" min="0" max="100" value="50" id="volume-slider" name="volume-slider">
+                        <br>
+                        <label for="sound-toggle"><strong>Sound:</strong></label>
+                        <input type="checkbox" checked data-toggle="toggle" data-onstyle="primary" id="sound-toggle"
+                            class="toggle btn btn-primary">
+                    </div>
+                    <div class="modal-footer justify-content-center bangers-font">
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </section>
 
@@ -153,6 +192,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"
         integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG"
         crossorigin="anonymous"></script>
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
     <script src="assets/js/script.js"></script>
     <script src="assets/js/modals.js"></script>
     <script src="assets/js/audio.js"></script>
