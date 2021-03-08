@@ -5,7 +5,6 @@ $(window).on('load', function () {
 });
 
 function congratsModal() {
-    app.diffLevel.innerHTML = app.difficultyLevel;
     app.moveScore.innerHTML = app.moves;
     if (app.minute == 0) {
         app.timeScore.innerHTML = app.second+" seconds";

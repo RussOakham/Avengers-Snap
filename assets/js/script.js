@@ -143,8 +143,8 @@ function checkMatch() {
 function disableCards() {
     app.lockBoard = true;
     setTimeout(() => {
-        app.firstCard.removeEventListener('click', flipCard);
-        app.secondCard.removeEventListener('click', flipCard);
+        app.firstCard.style.pointerEvents = "none";
+        app.secondCard.style.pointerEvents = "none";
         resetBoard();
     }, 500);
 };
