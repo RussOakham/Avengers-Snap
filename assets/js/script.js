@@ -159,7 +159,7 @@ function moveCounter() {
     }
 }
 
-
+// Timer function sequentially adds 1 second to 'app.timer' every 1000ms and updates innerHTML. When app.seconds reach 60, 1 is incremented to app.minute and app.second reset to 0. When app. minute reaches 60, 1 increment is added to app.hour and app.minutes reset to zero.
 function startTimer() {
     app.interval = setInterval(function () {
         app.timer.innerHTML = app.minute + ':' + app.second;
@@ -178,6 +178,7 @@ function startTimer() {
     }, 1000);
 }
 
+// Function removes all child elements (game cards) from app.game div and clears cardArray firstCard and secondCard variables.
 function clearGameCards() {
     app.game.querySelectorAll('*').forEach(child => child.remove());
     app.cardArray = [];
@@ -185,6 +186,7 @@ function clearGameCards() {
     app.secondCard = '';
 }
 
+// Function resets app.second, minute and hour variables to zero. Clears the app.interval so startTimer function ceases to increment and resets timer innerHTML to 0:00.
 function resetTimer() {
     app.second = 0;
     app.minute = 0;
@@ -193,17 +195,20 @@ function resetTimer() {
     app.timer.innerHTML = "0:00";
 }
 
+// Function resets app.moves counter to zero and updates app.counter.innerHTML to zero accordingly.
 function resetMoves() {
     app.moves = 0;
     app.counter.innerHTML = "0";
 }
 
+// Function resets entire game via recalling clearGameCards, resetMoves and resetTimer functions.
 function resetGame() {
     clearGameCards();
     resetMoves();
     resetTimer();
 }
 
+// Function resets current game level by calling clearGameCards, Reset Moves and resetTimer functions. These functions do not reset the app.difficultyLevel chosen by the user - so when startGame(); function is called, these earlier inputs are remembered.
 function resetCurrentGame () {
     clearGameCards();
     resetMoves();
@@ -211,6 +216,8 @@ function resetCurrentGame () {
     startGame();
 }
 
+
+// EVENT LISTENERS
 
 // Add click event listener to cards
 app.game.addEventListener('click', function (event) {
