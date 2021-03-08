@@ -20,7 +20,8 @@ let app = {
 
 // Function records users difficulty choice
 function diffChoice(event) {
-    app.difficultyLevel = event.id;;
+    resetGame();
+    app.difficultyLevel = event.id;
 }
 
 // Function determines number of card pairs required for game based on difficulty chosen
@@ -188,5 +189,10 @@ function startTimer() {
     console.log('test');
 }
 
-
-
+function resetGame() {
+    app.game.querySelectorAll('*').forEach(child => child.remove());
+    app.gameCards = '';
+    app.cardArray = [];
+    app.firstCard = '';
+    app.secondCard = '';
+}
