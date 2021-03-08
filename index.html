@@ -95,7 +95,7 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header justify-content-center">
-                    <h5 class="modal-title bangers-font" id="exampleModalLongTitle">How To Play</h5>
+                    <h5 class="modal-title bangers-font" id="how-to-play-title">How To Play</h5>
                 </div>
                 <div class="modal-body text-center">
                     <p>
@@ -110,6 +110,32 @@
                     <button type="button" class="btn btn-warning btn-easy level-btn" onclick="diffChoice(this); startGame()" id="easy">Easy</button>
                     <button type="button" class="btn btn-warning btn-medium level-btn" onclick="diffChoice(this); startGame()" id="medium">Medium</button>
                     <button type="button" class="btn btn-warning btn-hard level-btn" onclick="diffChoice(this); startGame()" id="hard">Hard</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 'Congratulations' Modal -->
+    <div class="modal fade" id="congrats-modal" tabindex="-1" role="dialog"
+        aria-labelledby="congrats-modal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header justify-content-center">
+                    <h5 class="modal-title bangers-font" id="congratulations-title">Congratulations!</h5>
+                </div>
+                <div class="modal-body text-center">
+                    <p>
+                        You've completed the `${app.difficultyLevel}` of Avenger's Snap!<br>
+                    </p>
+                    <p>
+                        The aim of the game is simple, match two cards via flipping them on the game board.<br>Once all cards are flipped - the game is complete!<br>Aim to complete the game in as few moves and as short a time as possible!
+                    </p>
+                    <p>Select a difficulty setting below to start a new game!</p>
+                </div>
+                <div class="modal-footer justify-content-center bangers-font">
+                    <button type="button" class="btn btn-warning btn-easy level-btn" onclick="diffChoice(this); startGame()" id="easy2">Easy</button>
+                    <button type="button" class="btn btn-warning btn-medium level-btn" onclick="diffChoice(this); startGame()" id="medium2">Medium</button>
+                    <button type="button" class="btn btn-warning btn-hard level-btn" onclick="diffChoice(this); startGame()" id="hard2">Hard</button>
                 </div>
             </div>
         </div>

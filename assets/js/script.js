@@ -16,6 +16,7 @@ let app = {
     timer: document.querySelector(".timer"),
     interval: '',
     matchedCards: [],
+    victoryModal: document.getElementById('congrats-modal'),
 }
 
 
@@ -34,6 +35,15 @@ function noGameCards() {
         app.gameCards = 9;
     }
     else if (app.difficultyLevel === "hard") {
+        app.gameCards = 12;
+    }
+    if (app.difficultyLevel === "easy2") {
+        app.gameCards = 6;
+    }
+    else if (app.difficultyLevel === "medium2") {
+        app.gameCards = 9;
+    }
+    else if (app.difficultyLevel === "hard2") {
         app.gameCards = 12;
     }
 }
@@ -223,6 +233,7 @@ function resetCurrentGame() {
 function gameComplete() {
     if (app.matchedCards.length === app.gameCards) {
         clearInterval(app.interval);
+        $('#congrats-modal').modal('show');
     }
 }
 

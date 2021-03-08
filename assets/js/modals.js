@@ -1,4 +1,4 @@
-// Load how to play modal on window load.
+// Load how to play modal on window load and close modal on difficulty selection.
 
 $(window).on('load', function () {
     $('#ltp-modal').modal('show');
@@ -6,4 +6,10 @@ $(window).on('load', function () {
     $(".level-btn").click(function () {
         $('#ltp-modal').modal('hide');
     })
+
+    $(".level-btn").click(function () {
+        $('#congrats-modal').modal('hide');
+    })
 });
+
+
