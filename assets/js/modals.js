@@ -2,14 +2,14 @@
 
 $(window).on('load', function () {
     $('#ltp-modal').modal('show');
-
-    $(".level-btn").click(function () {
-        $('#ltp-modal').modal('hide');
-    })
-
-    $(".level-btn").click(function () {
-        $('#congrats-modal').modal('hide');
-    })
 });
 
+function congratsModal() {
+    $('#congrats-modal').modal('show');
+}
+
+function closeModals() {
+    $('#ltp-modal').modal('hide');
+    $('#congrats-modal').modal('hide');
+}
 

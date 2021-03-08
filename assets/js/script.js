@@ -24,6 +24,7 @@ let app = {
 function diffChoice(event) {
     resetGame();
     app.difficultyLevel = event.id;
+    closeModals();
 }
 
 // Function determines number of card pairs required for game based on difficulty chosen
@@ -233,11 +234,9 @@ function resetCurrentGame() {
 function gameComplete() {
     if (app.matchedCards.length === app.gameCards) {
         clearInterval(app.interval);
-        $('#congrats-modal').modal('show');
+        congratsModal();
     }
 }
-
-
 
 
 // EVENT LISTENERS
