@@ -246,6 +246,25 @@ body {
     background: url('../images/wolverine.svg') no-repeat center;
 }
 
+.easyavenger11,
+.easy2avenger11,
+.mediumavenger11,
+.medium2avenger11,
+.hardavenger11,
+.hard2avenger11 {
+    background: url('../images/hulk.svg') no-repeat center;
+}
+
+.easyavenger12,
+.easy2avenger12,
+.mediumavenger12,
+.medium2avenger12,
+.hardavenger12,
+.hard2avenger12 {
+    background: url('../images/deadpool.png') no-repeat center;
+    background-size: 100%;
+}
+
 .back-face {
     background: url('../images/Avengers.svg') no-repeat center;
     background-size: 75%;
