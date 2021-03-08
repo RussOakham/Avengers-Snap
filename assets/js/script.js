@@ -221,6 +221,3 @@ app.game.addEventListener('click', function (event) {
 document.querySelectorAll(".level-btn").forEach(item => {
     item.addEventListener('click', event)
 });
-
-// Add click event listener to reset button
-document.querySelectorAll("#reset-btn").addEventListener('click', resetCurrentGame ());
