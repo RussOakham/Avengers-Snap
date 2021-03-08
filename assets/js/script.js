@@ -120,8 +120,8 @@ function flipCard() {
     };
 
     app.secondCard = event.target;
-    checkMatch();
     moveCounter();
+    checkMatch();
 }
 
 // Logic check to see if firstCard dataset and secondCard dataset match.
