@@ -89,10 +89,7 @@ function startGame() {
     });
 }
 
-// Add click event listener to cards
-app.game.addEventListener('click', function (event) {
-    flipCard();
-})
+
 
 // On click, adds 'flip' to class name and saves clicked div to 'firstCard' variable. If lockBoard variable is true, 'firstCard' is clicked twice, or yellow 'game-panel' is clicked, function exits and no action in taken. Once secondCard is selected, checkMatch and moveCounter functions are called.
 function flipCard() {
@@ -150,13 +147,6 @@ function resetBoard() {
     [app.firstCard, app.secondCard] = [null, null];
 }
 
-
-// Add click event listeners to difficulty select buttons.
-document.querySelectorAll(".level-btn").forEach(item => {
-    item.addEventListener('click', event)
-});
-
-
 // Add 1 increment to app.moves tally. Function called at end of secondCard part of flipCard() function.
 function moveCounter() {
     app.moves++;
@@ -186,20 +176,51 @@ function startTimer() {
             app.second = '0' + app.second;
         }
     }, 1000);
-    console.log('test');
 }
 
-function resetGame() {
+function clearGameCards() {
     app.game.querySelectorAll('*').forEach(child => child.remove());
-    app.gameCards = '';
     app.cardArray = [];
     app.firstCard = '';
     app.secondCard = '';
-    app.moves = 0;
+}
+
+function resetTimer() {
     app.second = 0;
     app.minute = 0;
     app.hour = 0;
     clearInterval(app.interval);
-    app.counter.innerHTML = "0";
     app.timer.innerHTML = "0:00";
 }
+
+function resetMoves() {
+    app.moves = 0;
+    app.counter.innerHTML = "0";
+}
+
+function resetGame() {
+    clearGameCards();
+    resetMoves();
+    resetTimer();
+}
+
+function resetCurrentGame () {
+    clearGameCards();
+    resetMoves();
+    resetTimer();
+    startGame();
+}
+
+
+// Add click event listener to cards
+app.game.addEventListener('click', function (event) {
+    flipCard();
+})
+
+// Add click event listeners to difficulty select buttons.
+document.querySelectorAll(".level-btn").forEach(item => {
+    item.addEventListener('click', event)
+});
+
+// Add click event listener to reset button
+document.querySelectorAll("#reset-btn").addEventListener('click', resetCurrentGame ());
