@@ -15,6 +15,7 @@ let app = {
     hour: 0,
     timer: document.querySelector(".timer"),
     interval: '',
+    matchedCards: [],
 }
 
 
@@ -112,10 +113,11 @@ function flipCard() {
 // Logic check to see if firstCard dataset and secondCard dataset match.
 // If Match = run disableCards();
 // if NoMatch = run unflipCards();
-
 function checkMatch() {
     if (app.firstCard.dataset.avenger === app.secondCard.dataset.avenger) {
         disableCards();
+        app.matchedCards.push(app.firstCard.dataset.avenger);
+        gameComplete();
         return;
     }
     unflipCards();
@@ -184,6 +186,7 @@ function clearGameCards() {
     app.cardArray = [];
     app.firstCard = '';
     app.secondCard = '';
+    app.matchedCards = [];
 }
 
 // Function resets app.second, minute and hour variables to zero. Clears the app.interval so startTimer function ceases to increment and resets timer innerHTML to 0:00.
@@ -209,12 +212,21 @@ function resetGame() {
 }
 
 // Function resets current game level by calling clearGameCards, Reset Moves and resetTimer functions. These functions do not reset the app.difficultyLevel chosen by the user - so when startGame(); function is called, these earlier inputs are remembered.
-function resetCurrentGame () {
+function resetCurrentGame() {
     clearGameCards();
     resetMoves();
     resetTimer();
     startGame();
 }
+
+
+function gameComplete() {
+    if (app.matchedCards.length === app.gameCards) {
+        clearInterval(app.interval);
+    }
+}
+
+
 
 
 // EVENT LISTENERS
