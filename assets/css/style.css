@@ -303,6 +303,13 @@ body {
 /* Audio Modal */
 .btn-primary {
     border: 1px solid black;
+    background-image: radial-gradient(lightgreen, darkgreen);
+    font-weight: 600;
+    color: black;
+}
+
+.btn {
+    border: 1px solid black;
 }
 
 .toggle-handle {
@@ -311,7 +318,22 @@ body {
 }
 
 .toggle-off {
-    color:  #333;
-    background-color: #e6e6e6;
+    color:  black;
+    background-image: radial-gradient(lightcoral, darkred);
     border: 1px solid black;
+    font-weight: 600;
+}
+
+.volume-div {
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+
+#volume-slider {
+    margin-left: 5px;
+}
+
+#sound-label {
+    margin-right: 5px;
 }

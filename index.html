@@ -168,12 +168,15 @@
                         <p>
                             Adjust volume or turn on/off sound effects below:
                         </p>
-                        <label for="volume-slider"><strong>Volume:</strong></label>
-                        <input type="range" min="0" max="100" value="50" id="volume-slider" name="volume-slider">
-                        <br>
-                        <label for="sound-toggle"><strong>Sound:</strong></label>
-                        <input type="checkbox" checked data-toggle="toggle" data-onstyle="primary" id="sound-toggle"
-                            class="toggle btn btn-primary">
+                        <div class="volume-div justify-content-center">
+                            <label for="volume-slider"><strong>Volume:</strong></label>
+                            <input type="range" min="0" max="100" value="50" id="volume-slider" name="volume-slider">
+                        </div>
+                        <div class="volume-div justify-content-center">
+                            <label for="sound-toggle" id="sound-label"><strong>Sound:</strong></label>
+                            <input type="checkbox" checked data-toggle="toggle" data-onstyle="primary" id="sound-toggle"
+                                class="toggle btn btn-primary">
+                        </div>
                     </div>
                     <div class="modal-footer justify-content-center bangers-font">
                     </div>
