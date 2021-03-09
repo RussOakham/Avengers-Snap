@@ -25,5 +25,3 @@ function closeModals() {
     $('#congrats-modal').modal('hide');
     $('#audio-modal').modal('hide');
 }
-
-$('#sound-toggle').button('toggle')
