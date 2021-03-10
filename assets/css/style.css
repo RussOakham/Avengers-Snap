@@ -109,6 +109,7 @@ body {
     font-weight: 700;
     padding: 6px 12px;
     border-radius: .25rem;
+    box-shadow: 0 6px 6px -6px #000;
 }
 
 
