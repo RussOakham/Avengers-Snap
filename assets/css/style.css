@@ -423,3 +423,15 @@ body {
     background-size: cover;
     height: 100%;
 }
+
+.avenger-thor {
+    background: url('../images/thor-bio.png') no-repeat center;
+    background-size: cover;
+    height: 100%;
+}
+
+.avenger-wolverine {
+    background: url('../images/wolverine-bio.png') no-repeat center;
+    background-size: cover;
+    height: 100%;
+}
