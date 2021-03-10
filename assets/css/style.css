@@ -353,6 +353,26 @@ body {
     background-image: radial-gradient(circle, lightblue, darkblue);
 }
 
+.img-box-grey {
+    background-image: radial-gradient(circle, white, slategrey);
+}
+
+.img-box-red {
+    background-image: radial-gradient(circle, white, darkred);
+}
+
+.img-box-green {
+    background-image: radial-gradient(circle, lightgreen, darkgreen);
+}
+
+.img-box-brown {
+    background-image: radial-gradient(circle, white, Sienna);
+}
+
+.img-box-purple {
+    background-image: radial-gradient(circle, white, purple);
+}
+
 .text-box-lg {
     background-image: radial-gradient(circle, yellow, orange);
     border: solid 2px #000;
