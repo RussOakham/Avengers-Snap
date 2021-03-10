@@ -369,3 +369,21 @@ body {
     background-size: cover;
     height: 100%;
 }
+
+.avenger-antman {
+    background: url('../images/ant-man-bio.png') no-repeat center;
+    background-size: cover;
+    height: 100%;
+}
+
+.avenger-daredevil {
+    background: url('../images/daredevil-bio.png') no-repeat center;
+    background-size: cover;
+    height: 100%;
+}
+
+.avenger-deadpool {
+    background: url('../images/deadpool-bio.png') no-repeat center;
+    background-size: cover;
+    height: 100%;
+}
