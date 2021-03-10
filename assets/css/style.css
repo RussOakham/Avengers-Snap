@@ -411,3 +411,15 @@ body {
     background-size: cover;
     height: 100%;
 }
+
+.avenger-spiderman {
+    background: url('../images/spiderman-bio.png') no-repeat center;
+    background-size: cover;
+    height: 100%;
+}
+
+.avenger-thanos {
+    background: url('../images/thanos-bio.png') no-repeat center;
+    background-size: cover;
+    height: 100%;
+}
