@@ -387,3 +387,15 @@ body {
     background-size: cover;
     height: 100%;
 }
+
+.avenger-groot {
+    background: url('../images/groot-bio.png') no-repeat center;
+    background-size: cover;
+    height: 100%;
+}
+
+.avenger-hawkeye {
+    background: url('../images/hawkeye-bio.png') no-repeat center;
+    background-size: cover;
+    height: 100%;
+}
