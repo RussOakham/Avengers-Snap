@@ -70,6 +70,20 @@ body {
     font-weight: 700;
 }
 
+.site-designer {
+    margin-bottom: 0;
+    font-size: large;
+}
+
+.social-links a {
+    color: rgba(0,0,0,.9);
+    height: 20px;
+    transition: color 0.35s ease-in-out;
+}
+
+.social-links a:hover {
+    color: #3268BD;
+}
 
 /* Game Controls Styling */
 .btn-warning {
@@ -341,6 +355,17 @@ body {
 
 /* Avengers Bio Page */
 
+.text-box-lg {
+    background-image: radial-gradient(circle, yellow, orange);
+    border: solid 2px #000;
+    font-weight: 700;
+    padding: 6px 12px;
+    border-radius: .25rem;
+    min-height: 290px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
 .img-box {
     border: solid 2px #000;
     padding: 6px 12px;
@@ -371,17 +396,6 @@ body {
 
 .img-box-purple {
     background-image: radial-gradient(circle, white, purple);
-}
-
-.text-box-lg {
-    background-image: radial-gradient(circle, yellow, orange);
-    border: solid 2px #000;
-    font-weight: 700;
-    padding: 6px 12px;
-    border-radius: .25rem;
-    min-height: 290px;
-    margin-bottom: 10px;
-    text-align: center;
 }
 
 .avenger-captainamerica {
