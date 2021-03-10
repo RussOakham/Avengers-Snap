@@ -40,6 +40,9 @@ body {
     border-radius: .25rem;
 }
 
+.btn {
+    box-shadow: 0 6px 6px -6px #000;
+}
 
 /* Navbar Styling */
 .navbar {
