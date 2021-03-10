@@ -362,7 +362,7 @@ body {
 }
 
 .img-box-green {
-    background-image: radial-gradient(circle, lightgreen, darkgreen);
+    background-image: radial-gradient(circle, white, darkgreen);
 }
 
 .img-box-brown {
@@ -379,7 +379,7 @@ body {
     font-weight: 700;
     padding: 6px 12px;
     border-radius: .25rem;
-    min-height: 250px;
+    min-height: 290px;
     margin-bottom: 10px;
     text-align: center;
 }
