@@ -399,3 +399,15 @@ body {
     background-size: cover;
     height: 100%;
 }
+
+.avenger-hulk {
+    background: url('../images/hulk-bio.png') no-repeat center;
+    background-size: cover;
+    height: 100%;
+}
+
+.avenger-ironman {
+    background: url('../images/iron-man-bio.png') no-repeat center;
+    background-size: cover;
+    height: 100%;
+}
