@@ -188,7 +188,6 @@ body {
     -webkit-transition: .8s;     
     -o-transition: .8s;
     transition: .8s;
-    background: transparent;
 }
 
 .front-face,
@@ -200,11 +199,17 @@ body {
     pointer-events: none;
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
+    -webkit-transform: translate3d(0,0,0);
 }
 
 .front-face {
     -webkit-transform: rotateY(180deg);
             transform: rotateY(180deg);
+}
+
+.back-face {
+    -webkit-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
 }
 
 .easyavenger1,
