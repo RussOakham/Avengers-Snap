@@ -188,6 +188,7 @@ body {
     -webkit-transition: .8s;     
     -o-transition: .8s;
     transition: .8s;
+    background: transparent;
 }
 
 .front-face,
