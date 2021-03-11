@@ -197,15 +197,6 @@ body {
     height: 100%;
     width: 100%;
     pointer-events: none;
-    -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
-    -webkit-perspective: 0;
-            perspective: 0;
-    -webkit-transform: translate3d(0,0,0);
-            transform: translate3d(0,0,0);
-}
-
-.back-face {
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
 }
@@ -213,8 +204,6 @@ body {
 .front-face {
     -webkit-transform: rotateY(180deg);
             transform: rotateY(180deg);
-    -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
 }
 
 .easyavenger1,
