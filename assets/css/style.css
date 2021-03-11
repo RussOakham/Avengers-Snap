@@ -35,13 +35,16 @@ body {
     margin: 10px auto 10px auto;
     max-width: 430px;
     border: solid 2px #000;
+    background-image: -0-radial-gradient(circle, yellow, orange);
     background-image: radial-gradient(circle, yellow, orange);
-    box-shadow: 0 6px 6px -6px #000;
+    -webkit-box-shadow: 0 6px 6px -6px #000;
+            box-shadow: 0 6px 6px -6px #000;
     border-radius: .25rem;
 }
 
 .btn {
-    box-shadow: 0 6px 6px -6px #000;
+    -webkit-box-shadow: 0 6px 6px -6px #000;
+            box-shadow: 0 6px 6px -6px #000;
 }
 
 /* Navbar Styling */
@@ -81,6 +84,8 @@ body {
 .social-links a {
     color: rgba(0,0,0,.9);
     height: 20px;
+    -webkit-transition: color 0.35s ease-in-out;
+    -o-transition: color 0.35s ease-in-out;
     transition: color 0.35s ease-in-out;
 }
 
@@ -90,6 +95,7 @@ body {
 
 /* Game Controls Styling */
 .btn-warning {
+    background-image: -o-radial-gradient(circle, yellow, orange);
     background-image: radial-gradient(circle, yellow, orange);
     border: solid 2px #000;
     font-weight: 700;
@@ -104,12 +110,14 @@ body {
 }
 
 .text-box {
+    background-image: -o-radial-gradient(circle, yellow, orange);
     background-image: radial-gradient(circle, yellow, orange);
     border: solid 2px #000;
     font-weight: 700;
     padding: 6px 12px;
     border-radius: .25rem;
-    box-shadow: 0 6px 6px -6px #000;
+    -webkit-box-shadow: 0 6px 6px -6px #000;
+            box-shadow: 0 6px 6px -6px #000;
 }
 
 
@@ -124,15 +132,23 @@ body {
 /* Game Styling */
 
 #game-panel {
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    display: -webkit-flex;
+    display: -ms-flex;
     display: flex;
     margin: auto;
     padding: 5px;
     border: solid 2px #000;
+    background-image: -o-radial-gradient(circle, yellow, orange);
     background-image: radial-gradient(circle, yellow, orange);
-    box-shadow: 0 6px 6px -6px #000;
-    justify-content: center;
-    perspective: 1000px;
+    -webkit-box-shadow: 0 6px 6px -6px #000;
+            box-shadow: 0 6px 6px -6px #000;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-perspective: 1000px;
+            perspective: 1000px;
     min-height: 320px;
 }
 
@@ -141,22 +157,36 @@ body {
     height: 140px;
     margin: 5px;
     position: relative;
-    box-shadow: 0 6px 6px -6px #000;
+    -webkit-box-shadow: 0 6px 6px -6px #000;
+            box-shadow: 0 6px 6px -6px #000;
     border-radius: .25rem;
+    background-image: -o-radial-gradient(circle, lightblue, darkblue);
     background-image: radial-gradient(circle, lightblue, darkblue);
     border: solid 2px #000;
-    transform: scale(1);
-    transform-style: preserve-3d;
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    transition: -webkit-transform .8s;
+    -o-transition: transform .8s;
     transition: transform .8s;
+    transition: transform .8s, -webkit-transform .8s;
 }
 
 .memory-card:active {
-    transform: scale(0.97);
+    -webkit-transform: scale(0.97);
+            transform: scale(0.97);
+    -webkit-transition: .2s;
+    -o-transition: .2s;
     transition: .2s;
 }
 
 .memory-card.flip {
-    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+    -webkit-transition: .8s;     
+    -o-transition: .8s;
     transition: .8s;
 }
 
@@ -164,14 +194,16 @@ body {
 .back-face {
     padding: 10px;
     position: absolute;
-    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
     height: 100%;
     width: 100%;
     pointer-events: none;
 }
 
 .front-face {
-    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
 }
 
 .easyavenger1,
@@ -292,17 +324,23 @@ body {
 
 /* Modal Styling */
 .modal-content {
+    background-image: -o-radial-gradient(circle, lightcyan, darkcyan);
     background-image: radial-gradient(circle, lightcyan, darkcyan);
     font-weight: 600;
     border: solid 2px black;
-    box-shadow: 0 6px 6px -6px #000;
+    -webkit-box-shadow: 0 6px 6px -6px #000;
+            box-shadow: 0 6px 6px -6px #000;
     border-radius: 0;
-    transform: skew(-5deg);
+    -webkit-transform: skew(-5deg);
+        -ms-transform: skew(-5deg);
+            transform: skew(-5deg);
 }
 
 .modal-title {
     font-size: 170%;
-    transform: skew(5deg);
+    -webkit-transform: skew(5deg);
+        -ms-transform: skew(5deg);
+            transform: skew(5deg);
 }
 
 .modal-header,
@@ -311,28 +349,36 @@ body {
 }
 
 .modal-header {
-    transform: skew(5deg);
+    -webkit-transform: skew(5deg);
+        -ms-transform: skew(5deg);
+            transform: skew(5deg);
 }
 
 .modal-body {
-    transform: skew(5deg);
+    -webkit-transform: skew(5deg);
+        -ms-transform: skew(5deg);
+            transform: skew(5deg);
 }
 
 .btn-easy {
+    background-image: -o-radial-gradient(circle, lightgreen, darkgreen);
     background-image: radial-gradient(circle, lightgreen, darkgreen);
 }
 
 .btn-medium {
+    background-image: -o-radial-gradient(circle, lightyellow, darkorange);
     background-image: radial-gradient(circle, lightyellow, darkorange);
 }
 
 .btn-hard {
+    background-image: -o-radial-gradient(circle, lightcoral, darkred);
     background-image: radial-gradient(circle, lightcoral, darkred);
 }
 
 /* Audio Modal */
 .btn-primary {
     border: 1px solid black;
+    background-image: -o-radial-gradient(lightgreen, darkgreen);
     background-image: radial-gradient(lightgreen, darkgreen);
     font-weight: 600;
     color: black;
@@ -349,6 +395,7 @@ body {
 
 .toggle-off {
     color:  black;
+    background-image: -o-radial-gradient(lightcoral, darkred);
     background-image: radial-gradient(lightcoral, darkred);
     border: 1px solid black;
     font-weight: 600;
@@ -356,8 +403,12 @@ body {
 
 .volume-div {
     margin-bottom: 5px;
+    display: -webkit-flex;
+    display: -ms-flex;
     display: flex;
-    align-items: center;
+    -webkit-align-items: center;
+        -ms-align-items: center;
+            align-items: center;
 }
 
 #volume-slider {
@@ -371,6 +422,7 @@ body {
 /* Avengers Bio Page */
 
 .text-box-lg {
+    background-image: -o-radial-gradient(circle, yellow, orange);
     background-image: radial-gradient(circle, yellow, orange);
     border: solid 2px #000;
     font-weight: 700;
@@ -378,7 +430,8 @@ body {
     min-height: 290px;
     margin-bottom: 10px;
     text-align: center;
-    box-shadow: 0 6px 6px -6px #000;
+    -webkit-box-shadow: 0 6px 6px -6px #000;
+            box-shadow: 0 6px 6px -6px #000;
 }
 
 .img-box {
@@ -386,30 +439,37 @@ body {
     padding: 6px 12px;
     height: 290px;
     margin-bottom: 10px;
-    box-shadow: 0 6px 6px -6px #000;
+    -webkit-box-shadow: 0 6px 6px -6px #000;
+            box-shadow: 0 6px 6px -6px #000;
 } 
 
 .img-box-blue {
+    background-image: -o-radial-gradient(circle, lightblue, darkblue);
     background-image: radial-gradient(circle, lightblue, darkblue);
 }
 
 .img-box-grey {
+    background-image: -o-radial-gradient(circle, white, slategrey);
     background-image: radial-gradient(circle, white, slategrey);
 }
 
 .img-box-red {
+    background-image: -o-radial-gradient(circle, white, darkred);
     background-image: radial-gradient(circle, white, darkred);
 }
 
 .img-box-green {
-    background-image: radial-gradient(circle, white, darkgreen);
+    background-image: -o-radial-gradient(circle, white, darkred);
+    background-image: radial-gradient(circle, white, darkred);
 }
 
 .img-box-brown {
+    background-image: -o-radial-gradient(circle, white, Sienna);
     background-image: radial-gradient(circle, white, Sienna);
 }
 
 .img-box-purple {
+    background-image: -o-radial-gradient(circle, white, purple);
     background-image: radial-gradient(circle, white, purple);
 }
 
