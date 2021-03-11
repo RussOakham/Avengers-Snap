@@ -197,6 +197,8 @@ body {
     height: 100%;
     width: 100%;
     pointer-events: none;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
 }
 
 .back-face {
