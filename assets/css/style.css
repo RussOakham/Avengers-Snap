@@ -209,8 +209,8 @@ body {
 .front-face {
     -webkit-transform: rotateY(180deg);
             transform: rotateY(180deg);
-    -webkit-backface-visibility: visible;
-            backface-visibility: visible;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
 }
 
 .easyavenger1,
