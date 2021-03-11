@@ -194,16 +194,21 @@ body {
 .back-face {
     padding: 10px;
     position: absolute;
-    -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
     height: 100%;
     width: 100%;
     pointer-events: none;
 }
 
+.back-face {
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+}
+
 .front-face {
     -webkit-transform: rotateY(180deg);
             transform: rotateY(180deg);
+    -webkit-backface-visibility: visible;
+            backface-visibility: visible;
 }
 
 .easyavenger1,
