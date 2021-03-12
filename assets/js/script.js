@@ -61,11 +61,11 @@ function createCardLayout(gameCards) {
         app.cardArray.push(cardDiv);
 
         const charDiv = document.createElement("div");
-        charDiv.className = `${app.difficultyLevel}avenger${i} front-face`
+        charDiv.className = `card-light-blue ${app.difficultyLevel}avenger${i} front-face`
         cardDiv.appendChild(charDiv);
 
         const avengerDiv = document.createElement("div");
-        avengerDiv.className = `back-face`
+        avengerDiv.className = `card-dark-blue back-face`
         cardDiv.appendChild(avengerDiv);
     }
     for (let j = 1; j < app.gameCards + 1; j++) {
@@ -75,11 +75,11 @@ function createCardLayout(gameCards) {
         app.cardArray.push(cardDiv);
 
         const charDiv = document.createElement("div");
-        charDiv.className = `${app.difficultyLevel}avenger${j} front-face`
+        charDiv.className = `card-light-blue ${app.difficultyLevel}avenger${j} front-face`
         cardDiv.appendChild(charDiv);
 
         const avengerDiv = document.createElement("div");
-        avengerDiv.className = `back-face`
+        avengerDiv.className = `card-dark-blue back-face`
         cardDiv.appendChild(avengerDiv);
     }
 }

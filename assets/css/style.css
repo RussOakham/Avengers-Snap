@@ -160,8 +160,6 @@ body {
     -webkit-box-shadow: 0 6px 6px -6px #000;
             box-shadow: 0 6px 6px -6px #000;
     border-radius: .25rem;
-    background-image: -o-radial-gradient(circle, lightblue, darkblue);
-    background-image: radial-gradient(circle, lightblue, darkblue);
     border: solid 2px #000;
     -webkit-transform: scale(1);
         -ms-transform: scale(1);
@@ -190,6 +188,14 @@ body {
     transition: .8s;
 }
 
+.card-dark-blue {
+    background-color: royalblue;
+}
+
+.card-light-blue {
+    background-color: lightskyblue;
+}
+
 .front-face,
 .back-face {
     padding: 10px;
@@ -213,7 +219,10 @@ body {
 .medium2avenger1,
 .hardavenger1,
 .hard2avenger1 {
-    background: url('../images/antman.svg') no-repeat center;
+    background-image: url('../images/antman.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 
 .easyavenger2,
@@ -222,7 +231,10 @@ body {
 .medium2avenger2,
 .hardavenger2,
 .hard2avenger2 {
-    background: url('../images/captainamerica.svg') no-repeat center;
+    background-image: url('../images/captainamerica.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 
 .easyavenger3,
@@ -231,7 +243,10 @@ body {
 .medium2avenger3,
 .hardavenger3,
 .hard2avenger3 {
-    background: url('../images/daredevil.svg') no-repeat center;
+    background-image: url('../images/daredevil.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 
 .easyavenger4,
@@ -240,7 +255,10 @@ body {
 .medium2avenger4,
 .hardavenger4,
 .hard2avenger4 {
-    background: url('../images/groot.svg') no-repeat center;
+    background-image: url('../images/groot.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 
 .easyavenger5,
@@ -249,7 +267,10 @@ body {
 .medium2avenger5,
 .hardavenger5,
 .hard2avenger5 {
-    background: url('../images/hawkeye.svg') no-repeat center;
+    background-image: url('../images/hawkeye.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 
 .easyavenger6,
@@ -258,7 +279,10 @@ body {
 .medium2avenger6,
 .hardavenger6,
 .hard2avenger6 {
-    background: url('../images/ironman.svg') no-repeat center;
+    background-image: url('../images/ironman.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 
 .easyavenger7,
@@ -267,7 +291,10 @@ body {
 .medium2avenger7,
 .hardavenger7,
 .hard2avenger7 {
-    background: url('../images/spiderman.svg') no-repeat center;
+    background-image: url('../images/spiderman.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 
 .easyavenger8,
@@ -276,7 +303,10 @@ body {
 .medium2avenger8,
 .hardavenger8,
 .hard2avenger8 {
-    background: url('../images/thanos.svg') no-repeat center;
+    background-image: url('../images/thanos.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 
 .easyavenger9,
@@ -285,7 +315,10 @@ body {
 .medium2avenger9,
 .hardavenger9,
 .hard2avenger9 {
-    background: url('../images/thor.svg') no-repeat center;
+    background-image: url('../images/thor.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 
 .easyavenger10,
@@ -294,7 +327,10 @@ body {
 .medium2avenger10,
 .hardavenger10,
 .hard2avenger10 {
-    background: url('../images/wolverine.svg') no-repeat center;
+    background-image: url('../images/wolverine.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 
 .easyavenger11,
@@ -303,7 +339,10 @@ body {
 .medium2avenger11,
 .hardavenger11,
 .hard2avenger11 {
-    background: url('../images/hulk.svg') no-repeat center;
+    background-image: url('../images/hulk.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 
 .easyavenger12,
@@ -312,13 +351,17 @@ body {
 .medium2avenger12,
 .hardavenger12,
 .hard2avenger12 {
-    background: url('../images/deadpool.png') no-repeat center;
-    background-size: 100%;
+    background-image: url('../images/deadpool.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 
 .back-face {
-    background: url('../images/Avengers.svg') no-repeat center;
+    background-image: url('../images/Avengers.svg');
     background-size: 75%;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 /* Playing Card Styling */
