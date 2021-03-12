@@ -188,10 +188,6 @@ body {
     transition: .8s;
 }
 
-.card-dark-blue {
-    background-color: royalblue;
-}
-
 .card-light-blue {
     background-color: lightskyblue;
 }
@@ -358,8 +354,8 @@ body {
 }
 
 .back-face {
-    background-image: url('../images/Avengers.svg');
-    background-size: 75%;
+    background-image: url('../images/avengers-card.PNG');
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }

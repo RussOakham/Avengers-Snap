@@ -65,7 +65,7 @@ function createCardLayout(gameCards) {
         cardDiv.appendChild(charDiv);
 
         const avengerDiv = document.createElement("div");
-        avengerDiv.className = `card-dark-blue back-face`
+        avengerDiv.className = `back-face`
         cardDiv.appendChild(avengerDiv);
     }
     for (let j = 1; j < app.gameCards + 1; j++) {
@@ -79,7 +79,7 @@ function createCardLayout(gameCards) {
         cardDiv.appendChild(charDiv);
 
         const avengerDiv = document.createElement("div");
-        avengerDiv.className = `card-dark-blue back-face`
+        avengerDiv.className = `back-face`
         cardDiv.appendChild(avengerDiv);
     }
 }
