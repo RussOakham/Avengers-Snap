@@ -226,7 +226,6 @@ function resetGame() {
     clearGameCards();
     resetMoves();
     resetTimer();
-    resetGameSound();
 }
 
 // Function resets current game level by calling clearGameCards, Reset Moves and resetTimer functions. These functions do not reset the app.difficultyLevel chosen by the user - so when startGame(); function is called, these earlier inputs are remembered.
@@ -235,6 +234,7 @@ function resetCurrentGame() {
     resetMoves();
     resetTimer();
     startGame();
+    resetGameSound();
 }
 
 // Function determines if game is complete by testing if number of paired cards equals number of gameCard pairs generated. If SourceBuffer, then timer is stopped via clearing internal and congratulations modal is called
