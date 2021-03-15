@@ -79,8 +79,8 @@ audio.soundVolumeSlider.addEventListener('change', event => {
     audio.cardFlipAudio.volume = audio.soundVolumeSlider.value / 100;
     audio.cardMatchAudio.volume = audio.soundVolumeSlider.value / 100;
     audio.cardNoMatchAudio.volume = audio.soundVolumeSlider.value / 100;
-    audio.gameCompleteSound.volume = audio.soundVolumeSlider.defaultValue / 100;
-    audio.resetGameSound.volume = audio.soundVolumeSlider.defaultValue / 100;
+    audio.gameCompleteSound.volume = audio.soundVolumeSlider.value / 100;
+    audio.resetGameSound.volume = audio.soundVolumeSlider.value / 100;
 });
 
 // Event listener for Audio mute toggle - function from bootstraptoggle.com
