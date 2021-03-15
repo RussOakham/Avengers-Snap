@@ -191,8 +191,8 @@ body {
     transition: .8s;
 }
 
-.card-m-orchid {
-    background-color: mediumorchid;
+.card-d-orchid {
+    background-color: darkorchid;
 }
 
 .front-face,

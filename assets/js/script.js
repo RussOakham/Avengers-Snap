@@ -61,7 +61,7 @@ function createCardLayout(gameCards) {
         app.cardArray.push(cardDiv);
 
         const charDiv = document.createElement("div");
-        charDiv.className = `card-m-orchid ${app.difficultyLevel}avenger${i} front-face`
+        charDiv.className = `card-d-orchid ${app.difficultyLevel}avenger${i} front-face`
         cardDiv.appendChild(charDiv);
 
         const avengerDiv = document.createElement("div");
@@ -75,7 +75,7 @@ function createCardLayout(gameCards) {
         app.cardArray.push(cardDiv);
 
         const charDiv = document.createElement("div");
-        charDiv.className = `card-m-orchid ${app.difficultyLevel}avenger${j} front-face`
+        charDiv.className = `card-d-orchid ${app.difficultyLevel}avenger${j} front-face`
         cardDiv.appendChild(charDiv);
 
         const avengerDiv = document.createElement("div");
