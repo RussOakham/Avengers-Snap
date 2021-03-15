@@ -587,7 +587,7 @@ body {
 
 
 /* Media Queries - small viewports*/
-@media (max-width: 767.98px) { 
+@media (max-width: 575.98px) { 
     .memory-card {
         width: 70px;
         height: 98px;
