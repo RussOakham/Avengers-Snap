@@ -8,6 +8,7 @@ let audio = {
     soundVolumeSlider: document.getElementById("volume-slider"),
     soundOnOff: document.getElementById("sound-toggle"),
     soundMute: false,
+    lastVolume: 0,
 }
 
 // 5x Sound Functions used to play audio effects
@@ -64,10 +65,11 @@ function defaultVolume() {
 function audioMute() {
     if (audio.soundMute === false) {
         audio.soundMute = true;
-        console.log(audio.soundMute);
+        audio.lastVolume = audio.soundVolumeSlider.value;
+        audio.soundVolumeSlider.value = 0;
     } else if (audio.soundMute === true) {
         audio.soundMute = false;
-        console.log(audio.soundMute);
+        audio.soundVolumeSlider.value = audio.lastVolume;
     }
 }
 
