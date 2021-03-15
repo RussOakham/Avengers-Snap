@@ -45,6 +45,7 @@ body {
 .btn {
     -webkit-box-shadow: 0 6px 6px -6px #000;
             box-shadow: 0 6px 6px -6px #000;
+    border: solid 2px #000;
 }
 
 /* Navbar Styling */
@@ -427,10 +428,6 @@ body {
     color: black;
 }
 
-.btn {
-    border: 1px solid black;
-}
-
 .toggle-handle {
     border: 1px solid black;
     background-color: #fff;
@@ -587,3 +584,12 @@ body {
     background-size: cover;
     height: 100%;
 }
+
+
+/* Media Queries - small viewports*/
+@media (max-width: 767.98px) { 
+    .memory-card {
+        width: 70px;
+        height: 98px;
+    }
+ }
