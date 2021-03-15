@@ -226,6 +226,7 @@ function resetGame() {
     clearGameCards();
     resetMoves();
     resetTimer();
+    resetGameSound();
 }
 
 // Function resets current game level by calling clearGameCards, Reset Moves and resetTimer functions. These functions do not reset the app.difficultyLevel chosen by the user - so when startGame(); function is called, these earlier inputs are remembered.
@@ -241,6 +242,7 @@ function gameComplete() {
     if (app.matchedCards.length === app.gameCards) {
         clearInterval(app.interval);
         congratsModal();
+        gameCompleteSound();
     }
 }
 
