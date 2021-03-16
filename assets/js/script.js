@@ -20,7 +20,7 @@ let app = {
     interval: '',
     matchedCards: [],
     victoryModal: document.getElementById('congrats-modal'),
-}
+};
 
 
 // Function records users difficulty choice
@@ -56,30 +56,30 @@ function noGameCards() {
 function createCardLayout(gameCards) {
     for (let i = 1; i < app.gameCards + 1; i++) {
         const cardDiv = document.createElement("div");
-        cardDiv.className = 'memory-card',
-            cardDiv.dataset.avenger = `${app.difficultyLevel}avenger${i}`
+        cardDiv.className = 'memory-card';
+        cardDiv.dataset.avenger = `${app.difficultyLevel}avenger${i}`;
         app.cardArray.push(cardDiv);
 
         const charDiv = document.createElement("div");
-        charDiv.className = `card-d-orchid ${app.difficultyLevel}avenger${i} front-face`
+        charDiv.className = `card-d-orchid ${app.difficultyLevel}avenger${i} front-face`;
         cardDiv.appendChild(charDiv);
 
         const avengerDiv = document.createElement("div");
-        avengerDiv.className = `back-face`
+        avengerDiv.className = `back-face`;
         cardDiv.appendChild(avengerDiv);
     }
     for (let j = 1; j < app.gameCards + 1; j++) {
         const cardDiv = document.createElement("div");
-        cardDiv.className = 'memory-card',
-            cardDiv.dataset.avenger = `${app.difficultyLevel}avenger${j}`
+        cardDiv.className = 'memory-card';
+        cardDiv.dataset.avenger = `${app.difficultyLevel}avenger${j}`;
         app.cardArray.push(cardDiv);
 
         const charDiv = document.createElement("div");
-        charDiv.className = `card-d-orchid ${app.difficultyLevel}avenger${j} front-face`
+        charDiv.className = `card-d-orchid ${app.difficultyLevel}avenger${j} front-face`;
         cardDiv.appendChild(charDiv);
 
         const avengerDiv = document.createElement("div");
-        avengerDiv.className = `back-face`
+        avengerDiv.className = `back-face`;
         cardDiv.appendChild(avengerDiv);
     }
 }
@@ -118,7 +118,7 @@ function flipCard() {
         app.hasFlippedCard = true;
         app.firstCard = event.target;
         return;
-    };
+    }
 
     app.secondCard = event.target;
     moveCounter();
@@ -147,7 +147,7 @@ function disableCards() {
         app.secondCard.style.pointerEvents = "none";
         resetBoard();
     }, 500);
-};
+}
 
 // unflips non-matched cards after 1500ms and calls resetBoard function.
 function unflipCards() {
@@ -252,9 +252,9 @@ function gameComplete() {
 // Add click event listener to cards
 app.game.addEventListener('click', function (event) {
     flipCard();
-})
+});
 
 // Add click event listeners to difficulty select buttons.
 document.querySelectorAll(".level-btn").forEach(item => {
-    item.addEventListener('click', event)
+    item.addEventListener('click', event);
 });
