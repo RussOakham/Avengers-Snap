@@ -24,6 +24,9 @@ I validated the JavaScript with [JSHint](https://jshint.com/), which returned on
  All three tests showed inaccurate issues with undefined and unused variables, as the variables are used in the other JavaScript files.
 
 ### Google Lighthouse Audit
+I used Google's lighthouse audiot to test the website conforms positively with Google's performance metrics, with the aim of achieveing scores of 90% in all areas on desktop.
+
+
 
 **Performance** -
 
