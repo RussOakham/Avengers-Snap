@@ -12,10 +12,16 @@ I validated the HTML with [W3 Validation Service](https://validator.w3.org/). Th
     All pages showed warnings regarding HTML semantics and use H2-6's in sections, however upon review I am happy that all headings are relevant for page layout. So I decided not to enact any changes.
 
 ### W3 CSS 
-I also validated the CSS with the [w3 Validation Service](https://jigsaw.w3.org/css-validator/) and it found no errors.
+I validated the CSS with the [w3 Validation Service](https://jigsaw.w3.org/css-validator/) and it found no errors.
  - [CSS validation](design-resources/images/css-validator-result.PNG)
 
 ### JavaScript 
+I validated the JavaScript with [JSHint](https://jshint.com/), which returned on minor syntax errors, such as missing semi-colons, which I proceeded to update.
+ - [script.js](design-resources/images/JSHint-script-js-result.PNG)
+ - [modals.js](design-resources/images/JSHint-modals-js-result.PNG)
+ - [audio.js](design-resources/images/JSHint-audio-js-result.PNG)
+ 
+ All three tests showed inaccurate issues with undefined and unused variables, as the variables are used in the other JavaScript files.
 
 ### Google Lighthouse Audit
 
