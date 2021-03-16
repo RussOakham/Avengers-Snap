@@ -205,12 +205,12 @@ body {
     pointer-events: none;
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
+    transform: rotateX(0deg);
 }
 
 .front-face {
     -webkit-transform: rotateY(180deg);
             transform: rotateY(180deg);
-    opacity: 0.99;
 }
 
 .easyavenger1,
