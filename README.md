@@ -8,11 +8,11 @@ The game is created to engage and entertain users of all ages, especially those 
 
 I have used HTML, CSS and Javascript to build the game, ensuring it is fully responsive to the users chosen device.
 
-*responsive demo*
-
 ## Deployed site
-A live version of the website can be found *here*.
+The live website can be found at the following link;
+[Avengers Snap](https://russoakham.github.io/Avengers-Snap/)
 
+![Responsive demo](design-resources/images/avengers-snap-responsive-demo.PNG "Responsive demo")
 
 ## Table of Contents
 
@@ -77,25 +77,33 @@ At this point I began creating wireframes, using the above structure considerati
 ### Surface
 This is the sensory design section of a website, or how it looks, feels and sounds. I wanted the design to be clean and the colour scheme to be reminiscent of Marvels cinematic universe, as it is a very popular brand internationally. 
 
-#### Colour
-As the game is inspired by Marvels Avengers, I was keen to use a colour scheme in line with their brand, so it is instantly recognisable to fans of the franchise.
+#### Colour & Comic Styling
+As the game is inspired by Marvels Avengers, I was keen to use a colour scheme in line with the Marvel brand and maintain a comic book feel, so the site identity is instantly recognisable to fans of the franchise.
 
-With this in mind I chose the below as core design colours for the website;
-- Hot Rod Red - #a50000
-- Captain America - #3268bd
-- Hulk - #00991f
-- Mjolnir - #999999
-- Hawkeye - #460061
-- Cyber Yellow - #FFD300
+With this in mind I chose to use variations of the below colours ofr core design of the website;
+- Blue
+- Yellow
+- Orange
+- Rreen
+- Red
+- Purple
 
-The colour palettes were originally curated by iamtheagirl on [color-hex.com](https://www.color-hex.com/color-palette/7706) and Vivid Narwhal on [schemecholor.com](https://www.schemecolor.com/avengers-infinity-stones.php).
+For the page background I chose a 'Captain America Blue' (Hex: #3268BD) which was originally curated by iamtheagirl on [color-hex.com](https://www.color-hex.com/color-palette/7706).
 
 ![Colour Scheme 1](design-resources/colour-palette/avengers-color-palette-color-hex.com.png)
 
-![Colour Scheme 2](design-resources/colour-palette/avengers-infinity-stones-color-palette.png)
+To achieve a strong comic book style I researched online and found the following article which I used for inspiration. The article shows that via us of CSS techniques such as radial-gradient colour backgrounds and skew on some elements, you can achieve a strong comic book identity for you're site.
+
+[Code my UI - CSS Only Mobile Friendly Comic Book Layout](https://codemyui.com/css-mobile-friendly-comic-book-layout/)
 
 #### Language/Tone 
 I wanted the language to reflect the casual and fun atmosphere of the game, so content was written in line with this. Avoiding technical or formal language where possible.
+
+Similarly I wanted to use a fonts which reinforce the strong comic book identity of the site. To achieve this I used two [Google Fonts](https://fonts.google.com/);
+
+- [Bangers](https://fonts.google.com/specimen/Bangers?preview.text_type=custom)
+- [Comic Neue](https://fonts.google.com/specimen/Comic+Neue?preview.text_type=custom)
+- Cursive- Web safe font, used if primary two fonts fail to load.
 
 #### Styling Considerations
 Before beginning development, I listed some styling ideas that I felt benefit the website. Majority of these can be seen in the wireframes.
@@ -117,14 +125,20 @@ Before beginning development, I listed some styling ideas that I felt benefit th
 
 ### Existing Features
 #### **The Header** includes:
+- **Website Logo**: Builds brand awareness amongst users.
+- **Navigation Bar**: Allows users to navigate the site in an easy and intuitive way.
+- **How To Play**: Link to modal popup, providing user instructions and game difficulty options.
 
- #### **The Footer** includes:
+#### **The Footer** includes:
+- **Website Developer**: Copyright information for website developer brand awareness.
+- **Social Links**: Links to GitHub and LinkedIn of website developer for brand awareness.
 
- Both the Header and Footer are present and consistent on all website pages.
+Both the Header and Footer are present and consistent on all website pages.
 
- #### **Home** page includes:
+#### **Home** page includes:
 
- **Favicon**: Present on every page and in the form of business logo, allows users to identify the site by just seeing the icon on tab.
+**Favicon**: Present on every page and in the form of business logo, allows users to identify the site by just seeing the icon on tab.
+
 
 ### Features to consider implementing in future
 
