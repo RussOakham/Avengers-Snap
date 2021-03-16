@@ -9,7 +9,7 @@ let audio = {
     soundOnOff: document.getElementById("sound-toggle"),
     soundMute: false,
     lastVolume: 0,
-}
+};
 
 // 5x Sound Functions used to play audio effects
 function cardFlipSound() {
@@ -86,6 +86,6 @@ audio.soundVolumeSlider.addEventListener('change', event => {
 // Event listener for Audio mute toggle - function from bootstraptoggle.com
 $(function () {
     $('#sound-toggle').change(function () {
-        audioMute()
-    })
-})
+        audioMute();
+    });
+});

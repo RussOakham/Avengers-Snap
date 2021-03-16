@@ -11,7 +11,7 @@ function congratsModal() {
     }
     else {
         app.timeScore.innerHTML = app.minute+" minutes "+app.second+" seconds";
-    };
+    }
     
     $('#congrats-modal').modal('show');
 }
