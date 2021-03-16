@@ -26,21 +26,19 @@ I validated the JavaScript with [JSHint](https://jshint.com/), which returned on
 ### Google Lighthouse Audit
 I used Google's lighthouse audiot to test the website conforms positively with Google's performance metrics, with the aim of achieveing scores of 90% in all areas on desktop.
 
+![Google Lighthouse Audit Score](design-resources/images/google-lighthouse-report-score.PNG)
 
+After initial testing, all metrics were above 90% with the exception of performance, which has a score of 75%. However after inspecting the main reasons for this, I chose not to enact any fixes for the following reasons;
 
-**Performance** -
+![Google Lighthouse Performance Score](design-resources/images/google-performance-score.PNG)
 
-**Accessibility** -
-
-**Best Practices** - 
-
-**SEO** - 
-
+- **Eliminate render-blocking resources**: The resources slowing load speed are all bootstrap and core scripts, which are required for the website to function properly. Therefore can not be removed or deferred from load.
+- **Serve Static Assets with an efficient cache policy**: Changing cache policy requires server side configuration, which is not possible while using GitPages for deployment hosting.
 
 ## Responsive Browser & Device Testing
+To test the responsiveness of the site I used [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools), [Responsive Design Checker](https://www.responsivedesignchecker.com/) and [BrowserStack](https://www.browserstack.com/).
 
 ### Responsiveness
-
 
 ### Browser Compatibility
 
@@ -48,22 +46,20 @@ I used Google's lighthouse audiot to test the website conforms positively with G
 
 ## Issues I had to overcome
 
-- **Homepage Banner**:
+- **Modal loading on page load**:
 
-- **Yellow Content Box & Team-Card Sizing**: 
+- **Modal close on difficulty choice**:
 
-- **Google Map iframe**: 
+- **Safari - Marvel Character images disappearing on page flip**:
 
-- **logos and menu pdf**: 
+- **Volume slider move with Mute/Unmute**:
 
-- **Favicons**: 
+- **Populate Cards on difficulty choice**:
 
-- **Team Card Images**: 
+- **Adding difficulty buttons to Congratulations modal and launching game":
 
-- **Bootstrap Console Error**:
+- **Make Cards uninteractive once matched**:
 
 ## Issues still to overcome
 
-- **Online Reservation Form**: 
-
-- **Reservation Form Modal** - 
+- **Toggle Sound Mute On/Off when volume slider set to/from Zero**:
