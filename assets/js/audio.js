@@ -52,15 +52,6 @@ function resetGameSound() {
     }
 }
 
-// Function sets default sound effect volume on game load
-function defaultVolume() {
-    audio.cardFlipAudio.volume = audio.soundVolumeSlider.defaultValue / 100;
-    audio.cardMatchAudio.volume = audio.soundVolumeSlider.defaultValue / 100;
-    audio.cardNoMatchAudio.volume = audio.soundVolumeSlider.defaultValue / 100;
-    audio.gameCompleteSound.volume = audio.soundVolumeSlider.defaultValue / 100;
-    audio.resetGameSound.volume = audio.soundVolumeSlider.defaultValue / 100;
-}
-
 // Function mutes sound effect audio is sound mute is toggled
 function audioMute() {
     if (audio.soundMute === false) {
