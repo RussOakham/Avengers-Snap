@@ -36,11 +36,27 @@ After initial testing, all metrics were above 90% with the exception of performa
 - **Serve Static Assets with an efficient cache policy**: Changing cache policy requires server side configuration, which is not possible while using GitPages for deployment hosting.
 
 ## Responsive Browser & Device Testing
-To test the responsiveness of the site I used [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools), [Responsive Design Checker](https://www.responsivedesignchecker.com/) and [BrowserStack](https://www.browserstack.com/).
+To test the responsiveness of the site I used [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools), [Responsive Design Checker](https://www.responsivedesignchecker.com/) and [Lambdatest](https://app.lambdatest.com/).
 
 ### Responsiveness
+![Desktop Responsiveness](design-resources/images/desktop-responsive-testing.PNG)
+
+![Tablet Responsiveness](design-resources/images/tablet-responsive-testing.PNG)
+
+![Mobile Responsiveness](design-resources/images/mobile-responsive-testing.PNG)
+
+To ensure responsive I used bootstrap, flexbox methods and containers to ensure all site pages resized responsively for all device viewports. Additionally for small viewports, I created a media query which resizes the game memory cards to half their desktop size, this is so users do not need to scroll excessively while playing.
 
 ### Browser Compatibility
+![Browser Compatability](design-resources/images/browser-responsive-testing.PNG)
+
+Through testing I found some bugs on the Safari and Firefox browsers, where the 'hidden' (avenger) side of the playing cards would not display properly once they are flipped. My fix for these issues is documented in the 'Issues I had to overcome' section.
+
+Additionally the site does not load properly while using Internet Explorer, due to issues with bootstrap compatability.
+
+According to [caniuse](https://caniuse.com/usage-table) the current usage of Internet Explorer is just 1.1% or total browser users, therefore I am comfortable to not support IE in the site design.
+
+Note: Microsoft released Internet Explorer in 2013 and ceased active development in 2015, when Microsoft Edge was released as it's replacement, as evidenced by [this article](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/the-perils-of-using-internet-explorer-as-your-default-browser/ba-p/331732) from Microsoft's design team. Since 2015 Microsoft has been actively encouraging users to adopt Edge over Explorer, with the only remaining updates for IE, being security patches and bug fixes.
 
 ## Testing User Stories
 
@@ -51,6 +67,8 @@ To test the responsiveness of the site I used [Chrome DevTools](https://develope
 - **Modal close on difficulty choice**:
 
 - **Safari - Marvel Character images disappearing on page flip**:
+
+- **Firefox - backface visibility not showing on card flip**:
 
 - **Volume slider move with Mute/Unmute**:
 
