@@ -220,17 +220,51 @@ Additional information around these cloning steps can be found on [GitHub Pages 
 ## 6. Credits
 
 ### Design and research
+The following are websites and articles that I used for reference and inspiration:
+- [scotch.io - How to build a memory matching game in Javescript](https://scotch.io/tutorials/how-to-build-a-memory-matching-game-in-javascript) - Used to game design and code inspiration.
+- [Code my UI - CSS Only Mobile Friendly Comic Book Layout](https://codemyui.com/css-mobile-friendly-comic-book-layout/) - Used for inspiration of comic book styling using CSS.
+- [Marvel Cinematic Universe Fandom](https://marvelcinematicuniverse.fandom.com/wiki/Marvel_Cinematic_Universe_Wiki) - Used for referencing Marvel character designs, colour pallets and character biographies.
 
 ### Technical
+- [Real Favicon Generator](https://realfavicongenerator.net/): For generation of Favicon icons and code.
+- [Bootstrap Docs](https://getbootstrap.com/docs/5.0/getting-started/introduction/): For guidance on Bootstrap use and adaptations.
+- [CSS-Tricks](https://css-tricks.com/): For implementing CSS effects such as box-shadow.
+- [w3Schools](https://www.w3schools.com/): For checking proper syntax of HTML and CSS elements. 
+- [Autoprefixer](https://autoprefixer.github.io/) - For generating CSS browser prefixes.
+- [Stackoverflow](https://stackoverflow.com/) - For researching and troubleshooting JavaScript code issues.
 
 ### Content
 All text content on the site was written originally by myself, with the below notes;
+- **Avergers Bio's**: Inspired and adapted from [Marvel Cinematic Universe Fandom](https://marvelcinematicuniverse.fandom.com/wiki/Marvel_Cinematic_Universe_Wiki) character pages.
 
 ### Media
 The colour palette for the site was originally created by;
  - iamtheagirl - [color-hex](https://www.color-hex.com/color-palette/7706)
 
 The photos and images used for this site were obtained from;
+- **[Shutterstock](https://www.shutterstock.com/)**: From the following contributors;
+    - Captain America Bio Picture: Aratehortua
+    - Snap logo: Suryamann
+    - Avengers Banner Logo: Rose Carson.
+**Game Card Images**:
+- **[iconfinder.com](https://www.iconfinder.com/)**;
+    Game Card Images:
+    - Groot, Captain America, Iron Man, Spiderman, Ant Man, Thor, Hawkeye, Thanos, Daredevil, Wolverine, Deadpool and Cyclops: Vectto
+    - Hulk: Sujud.ico
+**Avengers Bio Images**
+- **[clipart-library.com](http://clipart-library.com/)**;
+    - [Ant Man](http://clipart-library.com/clip-art/242-2423316_ant-man-png-transparent-images-marvel-ant-man.htm)
+- **[freepngimg.com]**;
+    - Daredevil: Scott Ward
+    - Deadpool: Lydia Simmons
+    - Groot: Lydia Simmons
+    - Hawkeye: Lydia Simmons
+    - Hulk: Scott Ward
+    - Iron Man: Brett Croft
+    - Spider-Man: Brett Croft
+    - Thanos: Alexis Bailey
+    - Thor: Alexis Bailey
+    - Wolverine: Brett Croft
 
 ### Acknowledgements
  - Thanks to my mentor, [Precious Ijege](https://github.com/precious-ijege) for his suggestions, time and support.
