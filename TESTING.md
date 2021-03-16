@@ -59,6 +59,20 @@ According to [caniuse](https://caniuse.com/usage-table) the current usage of Int
 Note: Microsoft released Internet Explorer in 2013 and ceased active development in 2015, when Microsoft Edge was released as it's replacement, as evidenced by [this article](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/the-perils-of-using-internet-explorer-as-your-default-browser/ba-p/331732) from Microsoft's design team. Since 2015 Microsoft has been actively encouraging users to adopt Edge over Explorer, with the only remaining updates for IE, being security patches and bug fixes.
 
 ## Testing User Stories
+ - As a curious user, I want the home screen to be visually appealing, as this will positively aid my decision in whether I want to play the game. 
+
+ - As a user, I want the site to be easy and intuitive to navigate.
+
+ - As a user, I want to easily access the game, tutorials, difficulty and audio controls for the website.
+
+ - As a user, I want to be able to choose a difficulty level for the game and know how the game changes across difficulty.
+
+ - As a user, I want to be able to restart the game if necessary, without having to navigate away from the game screen.
+
+ - As a user, I want to be able to keep track of the number of moves I make and the time I take to complete the game, so I can try to improve on future plays.
+ 
+ - As a user, I want the cards to be randomised, so the image locations are different with each replay. 
+
 
 ## Issues I had to overcome
 
