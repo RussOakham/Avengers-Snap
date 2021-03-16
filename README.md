@@ -136,6 +136,23 @@ Before beginning development, I listed some styling ideas that I felt benefit th
 Both the Header and Footer are present and consistent on all website pages.
 
 #### **Home** page includes:
+- **Image Banner**: Visually pleasing design, allowing users to imediately identify site brand.
+- **Game Controls**: Ribbon of buttons above game panel, allowing users quick access to game controls;
+    -***Difficulty***: Calls 'How To Play' modal, which allows users to change game difficulty.
+    -***Restart***: Restart current game at same difficulty, reshuffling cards, resetting time and move counters.
+    -***Audio**: Calls 'Sound Effects' Modal, which allow users to change volume of sound effects or mute if they wish.
+    -***Move Counter***: Records number of moves made by users as the proceed through the game.
+    -***Timer***: Records time elapsed as users proceed through the game.
+- **Game Panel**: Panel houses the game cards, which are populated when game difficulty is chosen.
+
+##### **Home Page Modals**:
+- **How to Play Modal**: Modal pops up on page load, providing user instructions and game difficulty options.
+- **Sound Effects Modal**: Modal pops up when audio button pressed, allowing users to change volume of sound effects or mute if they wish.
+- **Congratulations Modal**: Modal pops up on game completion, congratulating user on finishing the game, provides moves and time score.  Also prompts user to replay the game at same or higher difficulty.
+
+#### **Avengers** page includes:
+- **Image Banner**: Visually pleasing design, allowing users to imediately identify site brand.
+- **Avengers Bios**: Image and short biographies for all marvel characters featured in the game, allowing users to gain a better understanding of the games characters.
 
 **Favicon**: Present on every page and in the form of business logo, allows users to identify the site by just seeing the icon on tab.
 
@@ -145,19 +162,21 @@ Both the Header and Footer are present and consistent on all website pages.
 ## 3. Technologies Used
 1. [HTML](https://en.wikipedia.org/wiki/HTML) - Programming language providing content and structure of website.
 2. [CSS](https://en.wikipedia.org/wiki/CSS) - Programming language providing styling of website.
-3. [Bootstrap CSS Framework](https://getbootstrap.com/) - Library of pre-built HTML and CSS components, used for various aspects of the site, such as navigation bar.
-4. [Font Awesome](https://fontawesome.com/) - Library used for icons, such as social links and heat chillis.
-5. [Google Fonts](https://fonts.google.com/) - Used to choose a font style for the website.
-6. [TinyPNG](https://tinypng.com/) & [TinyJPG](https://tinyjpg.com/): To minimise image file sizes and maximise page load speed.
-7. [ResizePixel](https://www.resizepixel.com/) - To manipulate image size and dimensions.
-8. [Real Favicon Generator](https://realfavicongenerator.net/) to generate favicons and icons for desktop and mobile usage.
-9. [Am I Responsive?](http://ami.responsivedesign.is/) used for responsive design demo in ReadMe summary.
-10. [GitHub](https://github.com/) - Remote hosting platform and code repository.
-11. [GitPod](https://gitpod.io/) - IDE (Integrated Development Environment), for writing, editing and saving code.
-12. [Balsamiq](https://balsamiq.com/) - Used for creation of wireframes for visual design testing.
-13. [Autoprefixer](https://autoprefixer.github.io/) - Used to add vendor prefixes to CSS rules.
-14. [Responsive Design Checker](https://www.responsivedesignchecker.com/) - Used to check website response across device types.
-15. [BrowserStack](https://www.browserstack.com/) - Used to check website response across device types.
+3. [JavaScript](https://en.wikipedia.org/wiki/JavaScript) - Programming language used various interactive elements of the website, including game logic, audio options etc.
+4. [Bootstrap CSS Framework](https://getbootstrap.com/) - Library of pre-built HTML and CSS components, used for various aspects of the site, such as navigation bar.
+5. [Font Awesome](https://fontawesome.com/) - Library used for icons, such as social links and heat chillis.
+6. [Google Fonts](https://fonts.google.com/) - Used to choose a font style for the website.
+7. [TinyPNG](https://tinypng.com/) & [TinyJPG](https://tinyjpg.com/): To minimise image file sizes and maximise page load speed.
+8. [remove.bg](https://www.remove.bg/) - Used to remove backgrounds from png images.
+9. [Real Favicon Generator](https://realfavicongenerator.net/) to generate favicons and icons for desktop and mobile usage.
+10. [Am I Responsive?](http://ami.responsivedesign.is/) used for responsive design demo in ReadMe summary.
+11. [GitHub](https://github.com/) - Remote hosting platform and code repository.
+12. [GitPod](https://gitpod.io/) - IDE (Integrated Development Environment), for writing, editing and saving code.
+13. [Balsamiq](https://balsamiq.com/) - Used for creation of wireframes for visual design testing.
+14. [Autoprefixer](https://autoprefixer.github.io/) - Used to add vendor prefixes to CSS rules.
+15. [Responsive Design Checker](https://www.responsivedesignchecker.com/) - Used to check website response across device types.
+16. [BrowserStack](https://www.browserstack.com/) - Used to check website response across device types.
+17. [Photopea](https://www.photopea.com/) - Used to create avengers snap page banner image, via layering two pngs together.
 
 ## 4. Testing
 The testing process can be seen in the [TESTING.md](TESTING.md) document.
@@ -180,7 +199,7 @@ To host on GitHub pages you must follow these steps:
 
 Additional information around these steps can be found on the [GitHub Pages Help Page](https://docs.github.com/en/github/working-with-github-pages/creating-a-github-pages-site).
 
-#### Hot to clone 'CI-Milestone-Project-1' in GitHub and GitPod.
+#### Hot to clone 'Avengers-Snap' in GitHub and GitPod.
 To run a version of the site locally, you can clone this repository using the following steps;
 
 In a code editor of your choice;
