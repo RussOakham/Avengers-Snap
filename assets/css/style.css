@@ -592,4 +592,23 @@ body {
         width: 70px;
         height: 98px;
     }
+
+    .modal-content,
+    .modal-title,
+    .modal-header,
+    .modal-body,
+    .modal-footer {
+        -webkit-transform: skew(0deg);
+        -ms-transform: skew(0deg);
+            transform: skew(0deg);
+    }
+
+    .modal-body {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .modal-footer {
+        padding-top: 0px;
+    }
  }
