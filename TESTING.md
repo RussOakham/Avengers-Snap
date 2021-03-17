@@ -60,8 +60,12 @@ Note: Microsoft released Internet Explorer in 2013 and ceased active development
 
 ## Testing User Stories
  - As a curious user, I want the home screen to be visually appealing, as this will positively aid my decision in whether I want to play the game. 
+    - When the user is navigating the site, they'll see the game logo and website banner at the top of each page.
+    - The site also has a favicon depicting the game logo, that makes the website recognisable while looking at browser tabs and bookmarks.
+    - The game uses bright vibrant colours, which will entice possitive emotional response from users. According to this article by [99 Designs](https://99designs.co.uk/blog/tips/how-color-impacts-emotions-and-behaviors/) The use of strong yellow colours should promote users to feel happy and spontaneous, while blue should promote a feeling of safety and relaxation.
 
  - As a user, I want the site to be easy and intuitive to navigate.
+    - On all pages of the website, the simple navigation bar is fixed to the top of the page, which allows easy navigation to all other pages of the website. When scrolling, the navigation bar remains at the top of the viewport, for easy access.
 
  - As a user, I want to easily access the game, tutorials, difficulty and audio controls for the website.
 
