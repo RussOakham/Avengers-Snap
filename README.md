@@ -159,6 +159,8 @@ Both the Header and Footer are present and consistent on all website pages.
 
 ### Features to consider implementing in future
 
+**Leaderboard**
+
 ## 3. Technologies Used
 1. [HTML](https://en.wikipedia.org/wiki/HTML) - Programming language providing content and structure of website.
 2. [CSS](https://en.wikipedia.org/wiki/CSS) - Programming language providing styling of website.
