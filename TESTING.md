@@ -85,22 +85,71 @@ Note: Microsoft released Internet Explorer in 2013 and ceased active development
 
 ## Issues I had to overcome
 
-- **Modal loading on page load**:
+- **Modal loading on page load**: 
 
-- **Modal close on difficulty choice**:
+    I wanted the 'how to play' modal to load when the page is opened, as this this puts the start game mechanism (game difficulty buttons) in front of the user as soon as possible. To achieve this utilised a script found on the following [stack overflow post](https://stackoverflow.com/questions/10233550/launch-bootstrap-modal-on-page-load).
 
-- **Safari - Marvel Character images disappearing on page flip**:
+- **Setting difficulty and starting game on difficulty button click**: 
 
-- **Firefox - backface visibility not showing on card flip**:
+    When users choose their game difficulty, I wanted the how-to-play modal to close instantly and the game to populate the cards in line with difficulty choice via diffChoice() and startGame() functions
 
-- **Volume slider move with Mute/Unmute**:
+    Originally I attempted to add an event listener to the difficulty buttons via use of JavaScript, which would call the functions upon click. Fowever the event listener would not work as I intended. I overcame this difficulty by adding 'onclick="diffChoice(); startGame()' to the buttons within the HTML itself. By adding this, when the buttons are clicked by a user, both the diffChoice() and startGame() functions are called correctly.
 
-- **Populate Cards on difficulty choice**:
+- **Safari - Marvel Character images disappearing on page flip**: 
+    
+    Upon testing of browser compatability, I came across an issue with Safari and mobile browsers, this was due to my use of 'radial-gradient' CSS as on the cards.
+
+    In my original game design, through the use of css styles background, background-image: radial-gradient and backface-visibility:hidden, I was able to create the below visual styling for the cards. This was done via using setting the "background-image:radial-gradient(circle, lightblue, darkblue)" to the 'memory-card' div, while setting the 'A' logo and Marvel Character images as 'background' in it's child divs of 'front-face' and 'back-face'.
+
+    ![Radial-Gradient-Cards](design-resources/images/radial-gradient-halo.PNG)
+
+    Visually i was very pleased with this, as the halo effect around character images gives a strong comic book styling.
+
+    However while testing in Safari, a bug became apparent where when the card is flipped, the character image would disappear. This is because browsers view 'radial-gradient' as an image and safari re-orders the image layers when dealing with backface-visibility transformations, essentially placing the character image would be placed under the memory card background and hiding it from users view.
+
+    To rectify this, I updated the background used on the front-face card side to be a standard 'background-colour', which does not trigger safari to reorder the visual layers.
+
+- **Firefox - backface visibility not showing on card flip**: 
+
+    During browser testing, I also noticed a bug in firefox, where the backface of the card was not displaying once flipped, as seen below;
+
+    ![Radial-Gradient-Cards](design-resources/images/firefox-bug.PNG)
+
+    After researching this online, I found [this posting on Stack Overflow](https://stackoverflow.com/questions/9604982/backface-visibility-not-working-properly-in-firefox-works-in-safari), which explained this was a bug with firefox's use of the 'backface-visibility: hidden' css style and the solution is to add 'transform: rotateX(0deg)' to both front and back face divs.
+
+    After adding the 'transform: rotateX(0deg)', the marvel character image and background now display correctly.
+
+- **Volume slider move with Mute/Unmute**: 
+
+    After adding the volume slider and volume mute functionality to the website, I wanted them to interact together so as to improve user experience. When 'Sound' setting is toggled to 'off', the volume slider should set to zero. Also when sound is toggled on, I wanted the volume slider to return to it's previous value.
+
+    Top accomplish this I found the following [post on stackoverflow](https://stackoverflow.com/questions/60341429/how-to-reset-input-type-range-to-0-on-volume-slider-when-clicking-on-the-mute-bu), which I adapted code from.
 
 - **Adding difficulty buttons to Congratulations modal and launching game":
 
+    So ass to ensure a smooth user experience, I wanted to add options to relaunch the game using difficulty choices on the congratulations modal. This is to avoid the user having to manually close the modal, to manually open the 'difficulty' modal.
+
+    However when adding the difficulty buttons to the congratulations modal, the game would not launch. This was because the button ID's of 'easy', 'medium' and 'hard' were no longer unique and this ID's are integral the functions which populate game cards. Specifically the diffChoice function which determines number of gamecards to generate and the createCardLayout function, which generates card class names.
+
+    To rectify this, I altered the new difficulty button ID's in the congratulations modal to 'easy2', 'medium2' and 'hard2'. I then expanded the diffChoice function, to include recognition of these ID's as inputs.
+
+    ![Radial-Gradient-Cards](design-resources/images/difficulty2-script.PNG)
+
+    As the difficulty ID is also used in the card class name generation, I also added the 'difficulty2' variant ID's to the card classes in style.css.
+
+    ![Radial-Gradient-Cards](design-resources/images/avenger-card-classes.PNG)
+
 - **Make Cards uninteractive once matched**:
+
+    Within the design of the game, it is important that once matched, cards become uninteractive. This is to avoid matched cards being accidently unflipped and also preventing them for being accidently fed into further matching logic.
+
+    To achieve this, I originally attempted to remove event listeners from cards once matched, however upon initial testing, the event listeners would not deactivate as I wished. To rectify this I changed my approach and updated the 'disableCards' function to instead add css style 'pointer-events: none' - thereby making them uninteractive to click events.
+
+    ![Radial-Gradient-Cards](design-resources/images/disable-cards.PNG)
 
 ## Issues still to overcome
 
 - **Toggle Sound Mute On/Off when volume slider set to/from Zero**:
+
+    When the volume slider is set to 'zero', the 'Sound' toggle should set to 'Off' and when the volume slider is moved above zero, the 'Sound' toggle should set to 'On'. This is currently not set, due to scripting difficulties.
+
