@@ -68,14 +68,19 @@ Note: Microsoft released Internet Explorer in 2013 and ceased active development
     - On all pages of the website, the simple navigation bar is fixed to the top of the page, which allows easy navigation to all other pages of the website. When scrolling, the navigation bar remains at the top of the viewport, for easy access.
 
  - As a user, I want to easily access the game, tutorials, difficulty and audio controls for the website.
+    - On the index page, there is a game controls ribbon, situated just above the game panel. The controls ribbon contains buttons, allowing the user easy access to difficulty settings, how to play explanation, game reset and audio controls.
 
  - As a user, I want to be able to choose a difficulty level for the game and know how the game changes across difficulty.
+    - Upon page load and via choosing the 'Difficulty' button or 'How to Play' navbar link, a modal is called. Within this modal, the user can choose easy, medium or hard difficulty modes - each higher difficulty relaunches the game with increased number of cards.
 
  - As a user, I want to be able to restart the game if necessary, without having to navigate away from the game screen.
+    - Situated just above the game panel is 'restart game' button, this resets the game panel based upon your current difficulty choice. All cards and regenerated, reshuffled, the move and timer counters are also reset.
 
  - As a user, I want to be able to keep track of the number of moves I make and the time I take to complete the game, so I can try to improve on future plays.
+    - Situated just above the game panel, there are move and timer counters, which allow the user to quickly see how many moves they've taken in their current game and time elapsed. Additionally, when the game is completed, the players final move and time taken are displayed in a 'congratulations' modal.
  
  - As a user, I want the cards to be randomised, so the image locations are different with each replay. 
+    - When a difficulty is chosen, or the current game restarted, JavaScript has been used to randomise the position of all generated cards, so no playthrough is ever the same.
 
 
 ## Issues I had to overcome
