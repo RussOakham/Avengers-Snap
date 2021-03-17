@@ -69,10 +69,9 @@ As the purpose of the website is to showcase the card game, I want to ensure the
 ### Skeleton
 At this point I began creating wireframes, using the above structure considerations. I used [Balsamiq](https://balsamiq.com/) these below;
 
-- [Home page on desktop and mobile]()
-- [Home Page - welcome modal on desktop and mobile]()
-- [Home Page - game complete Modal on desktop and mobile]()
-- [Avengers Page on desktop and mobile]()
+- [Home page on desktop and mobile](assets/design-resources/images/Home.PNG)
+- [Home Page - welcome modal on desktop and mobile](assets/design-resources/images/Modals.PNG)
+- [Avengers Page on desktop and mobile](assets/design-resources/images/Avengers-Page.PNG)
 
 ### Surface
 This is the sensory design section of a website, or how it looks, feels and sounds. I wanted the design to be clean and the colour scheme to be reminiscent of Marvels cinematic universe, as it is a very popular brand internationally. 
@@ -179,7 +178,7 @@ Both the Header and Footer are present and consistent on all website pages.
 13. [Balsamiq](https://balsamiq.com/) - Used for creation of wireframes for visual design testing.
 14. [Autoprefixer](https://autoprefixer.github.io/) - Used to add vendor prefixes to CSS rules.
 15. [Responsive Design Checker](https://www.responsivedesignchecker.com/) - Used to check website response across device types.
-16. [BrowserStack](https://www.browserstack.com/) - Used to check website response across device types.
+16. [Lambdatest](https://www.lambdatest.com/) - Used to check website response across device types.
 17. [Photopea](https://www.photopea.com/) - Used to create avengers snap page banner image, via layering two pngs together.
 
 ## 4. Testing
@@ -239,7 +238,7 @@ The following are websites and articles that I used for reference and inspiratio
 
 ### Content
 All text content on the site was written originally by myself, with the below notes;
-- **Avergers Bio's**: Inspired and adapted from [Marvel Cinematic Universe Fandom](https://marvelcinematicuniverse.fandom.com/wiki/Marvel_Cinematic_Universe_Wiki) character pages.
+- **Avengers Bio's**: Inspired and adapted from [Marvel Cinematic Universe Fandom](https://marvelcinematicuniverse.fandom.com/wiki/Marvel_Cinematic_Universe_Wiki) character pages.
 
 ### Media
 The colour palette for the site was originally created by;
@@ -258,7 +257,7 @@ The photos and images used for this site were obtained from;
 **Avengers Bio Images**
 - **[clipart-library.com](http://clipart-library.com/)**;
     - [Ant Man](http://clipart-library.com/clip-art/242-2423316_ant-man-png-transparent-images-marvel-ant-man.htm)
-- **[freepngimg.com]**;
+- **[freepngimg.com](https://freepngimg.com/)**;
     - Daredevil: Scott Ward
     - Deadpool: Lydia Simmons
     - Groot: Lydia Simmons
