@@ -54,7 +54,7 @@ After initial testing, all metrics were above 90% with the exception of performa
 - **Serve Static Assets with an efficient cache policy**: Changing cache policy requires server side configuration, which is not possible while using GitPages for deployment hosting.
 
 ## Responsive Device & Browser Testing
-To test the responsiveness of the site I used [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools), [Responsive Design Checker](https://www.responsivedesignchecker.com/) and [Lambdatest](https://app.lambdatest.com/).
+To test the responsiveness of the site I used [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools), [Responsive Design Checker](https://www.responsivedesignchecker.com/) and [Lambdatest](https://www.lambdatest.com/).
 
 ### Responsiveness
 ![Desktop Responsiveness](design-resources/images/desktop-responsive-testing.PNG)
@@ -109,15 +109,15 @@ Note: Microsoft released Internet Explorer in 2013 and ceased active development
 
 - **Setting difficulty and starting game on difficulty button click**: 
 
-    When users choose their game difficulty, I wanted the how-to-play modal to close instantly and the game to populate the cards in line with difficulty choice via diffChoice() and startGame() functions
+    When users choose their game difficulty, I wanted the how-to-play modal to close instantly and the game to populate the cards in line with difficulty choice via *diffChoice()* and *startGame()* functions
 
-    Originally I attempted to add an event listener to the difficulty buttons via use of JavaScript, which would call the functions upon click. Fowever the event listener would not work as I intended. I overcame this difficulty by adding 'onclick="diffChoice(); startGame()' to the buttons within the HTML itself. By adding this, when the buttons are clicked by a user, both the diffChoice() and startGame() functions are called correctly.
+    Originally I attempted to add an event listener to the difficulty buttons via use of JavaScript, which would call the functions upon click. Fowever the event listener would not work as I intended. I overcame this difficulty by adding *'onclick="diffChoice(); startGame()'* to the buttons within the HTML itself. By adding this, when the buttons are clicked by a user, both the *diffChoice()* and *startGame()* functions are called correctly.
 
 - **Safari - Marvel Character images disappearing on page flip**: 
     
     Upon testing of browser compatability, I came across an issue with Safari and mobile browsers, this was due to my use of 'radial-gradient' CSS as on the cards.
 
-    In my original game design, through the use of css styles background, background-image: radial-gradient and backface-visibility:hidden, I was able to create the below visual styling for the cards. This was done via using setting the "background-image:radial-gradient(circle, lightblue, darkblue)" to the 'memory-card' div, while setting the 'A' logo and Marvel Character images as 'background' in it's child divs of 'front-face' and 'back-face'.
+    In my original game design, through the use of css styles background, background-image: radial-gradient and backface-visibility:hidden, I was able to create the below visual styling for the cards. This was done via using setting the *"background-image:radial-gradient(circle, lightblue, darkblue)"* to the 'memory-card' div, while setting the 'A' logo and Marvel Character images as 'background' in it's child divs of 'front-face' and 'back-face'.
 
     ![Radial-Gradient-Cards](design-resources/images/radial-gradient-halo.PNG)
 
@@ -125,7 +125,7 @@ Note: Microsoft released Internet Explorer in 2013 and ceased active development
 
     However while testing in Safari, a bug became apparent where when the card is flipped, the character image would disappear. This is because browsers view 'radial-gradient' as an image and safari re-orders the image layers when dealing with backface-visibility transformations, essentially placing the character image would be placed under the memory card background and hiding it from users view.
 
-    To rectify this, I updated the background used on the front-face card side to be a standard 'background-colour', which does not trigger safari to reorder the visual layers.
+    To rectify this, I updated the background used on the front-face card side to be a standard *'background-colour'*, which does not trigger safari to reorder the visual layers.
 
 - **Firefox - backface visibility not showing on card flip**: 
 
@@ -133,9 +133,9 @@ Note: Microsoft released Internet Explorer in 2013 and ceased active development
 
     ![Radial-Gradient-Cards](design-resources/images/firefox-bug.PNG)
 
-    After researching this online, I found [this posting on Stack Overflow](https://stackoverflow.com/questions/9604982/backface-visibility-not-working-properly-in-firefox-works-in-safari), which explained this was a bug with firefox's use of the 'backface-visibility: hidden' css style and the solution is to add 'transform: rotateX(0deg)' to both front and back face divs.
+    After researching this online, I found [this post on Stack Overflow](https://stackoverflow.com/questions/9604982/backface-visibility-not-working-properly-in-firefox-works-in-safari), which explained this was a bug with firefox's use of the *'backface-visibility: hidden'* css style and the solution is to add *'transform: rotateX(0deg)'* to both front and back face divs.
 
-    After adding the 'transform: rotateX(0deg)', the marvel character image and background now display correctly.
+    After adding the *'transform: rotateX(0deg)'*, the marvel character image and background now display correctly.
 
 - **Volume slider move with Mute/Unmute**: 
 
@@ -147,13 +147,13 @@ Note: Microsoft released Internet Explorer in 2013 and ceased active development
 
     So ass to ensure a smooth user experience, I wanted to add options to relaunch the game using difficulty choices on the congratulations modal. This is to avoid the user having to manually close the modal, to manually open the 'difficulty' modal.
 
-    However when adding the difficulty buttons to the congratulations modal, the game would not launch. This was because the button ID's of 'easy', 'medium' and 'hard' were no longer unique and this ID's are integral the functions which populate game cards. Specifically the diffChoice function which determines number of gamecards to generate and the createCardLayout function, which generates card class names.
+    However when adding the difficulty buttons to the congratulations modal, the game would not launch. This was because the button ID's of 'easy', 'medium' and 'hard' were no longer unique and this ID's are integral the functions which populate game cards. Specifically the *diffChoice()* function which determines number of gamecards to generate and the *createCardLayout()* function, which generates card class names.
 
-    To rectify this, I altered the new difficulty button ID's in the congratulations modal to 'easy2', 'medium2' and 'hard2'. I then expanded the diffChoice function, to include recognition of these ID's as inputs.
+    To rectify this, I altered the new difficulty button ID's in the congratulations modal to 'easy2', 'medium2' and 'hard2'. I then expanded the *diffChoice()* function, to include recognition of these ID's as inputs.
 
     ![Radial-Gradient-Cards](design-resources/images/difficulty2-script.PNG)
 
-    As the difficulty ID is also used in the card class name generation, I also added the 'difficulty2' variant ID's to the card classes in style.css.
+    As the difficulty ID is also used in the card class name generation, I also added the 'difficulty2' variant ID's to the card classes in *style.css*.
 
     ![Radial-Gradient-Cards](design-resources/images/avenger-card-classes.PNG)
 
@@ -161,7 +161,7 @@ Note: Microsoft released Internet Explorer in 2013 and ceased active development
 
     Within the design of the game, it is important that once matched, cards become uninteractive. This is to avoid matched cards being accidently unflipped and also preventing them for being accidently fed into further matching logic.
 
-    To achieve this, I originally attempted to remove event listeners from cards once matched, however upon initial testing, the event listeners would not deactivate as I wished. To rectify this I changed my approach and updated the 'disableCards' function to instead add css style 'pointer-events: none' - thereby making them uninteractive to click events.
+    To achieve this, I originally attempted to remove event listeners from cards once matched, however upon initial testing, the event listeners would not deactivate as I wished. To rectify this I changed my approach and updated the *'disableCards()'* function to instead add css style *'pointer-events: none'* - thereby making them uninteractive to click events.
 
     ![Radial-Gradient-Cards](design-resources/images/disable-cards.PNG)
 
