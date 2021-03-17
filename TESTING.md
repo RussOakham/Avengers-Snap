@@ -1,5 +1,23 @@
 # <p align="center">Avengers Snap</p>
 
+1. [**Validation**](#validation)
+    - [**HTML**](#w3-html)
+    - [**CSS**](#w3-css)
+    - [**JavaScript**](#javascript)
+    - [**Google Lighthouse Audit**](#google-lighthouse-audit)
+
+2. [**Responsive Device & Browser Testing**](#responsive-device-browser-testing)
+    - [**Responsiveness**](#responsiveness)
+    - [**Browser Compatibility**](#browser-compatibility)
+
+3. [**Testing User Stories**](#testing-user-stories)
+
+4. [**Issues I had to overcome**](#issues-i-had-to-overcome)
+
+5. [**Issues still to overcome**](#issues-still-to-overcome)
+
+
+
 ## Validation
 
 ### W3 HTML
@@ -35,7 +53,7 @@ After initial testing, all metrics were above 90% with the exception of performa
 - **Eliminate render-blocking resources**: The resources slowing load speed are all bootstrap and core scripts, which are required for the website to function properly. Therefore can not be removed or deferred from load.
 - **Serve Static Assets with an efficient cache policy**: Changing cache policy requires server side configuration, which is not possible while using GitPages for deployment hosting.
 
-## Responsive Browser & Device Testing
+## Responsive Device & Browser Testing
 To test the responsiveness of the site I used [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools), [Responsive Design Checker](https://www.responsivedesignchecker.com/) and [Lambdatest](https://app.lambdatest.com/).
 
 ### Responsiveness

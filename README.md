@@ -16,24 +16,24 @@ The live website can be found at the following link;
 
 ## Table of Contents
 
-1. [**UX**](#ux)
+1. [**UX**](#1.-ux)
     - [**User-Stories**](#user-stories)
     - [**Structure**](#structure)
     - [**Skeleton**](#skeleton)
     - [**Surface**](#surface)
 
-2. [**Features**](#features)
+2. [**Features**](#2.-features)
     - [**Existing Features**](#existing-features)
     - [**Features to consider in future**](#features-to-consider-implementing-in-future)
 
-3. [**Technologies Used**](#technologies-used)
+3. [**Technologies Used**](#3.-technologies-used)
 
-4. [**Testing**](#testing)
+4. [**Testing**](#4.-testing)
 
-5. [**Deployment**](#deployment)
+5. [**Deployment**](#5.-deployment)
     - [**GitHub Pages**](#github-pages)
 
-6. [Credits](#credits)
+6. [**Credits**](#6.-credits)
     - [**Design and Research**](#design-and-research)
     - [**Technical**](#technical)
     - [**Content**](#content)
@@ -160,6 +160,8 @@ Both the Header and Footer are present and consistent on all website pages.
 ### Features to consider implementing in future
 
 **Leaderboard**
+
+ - Add ability to input a usernamer, for game to save user move, timer and difficulty scores and display on a global leaderboard. As this would require configuration to save and fetch data from a server, this is has not yet been implemented.
 
 ## 3. Technologies Used
 1. [HTML](https://en.wikipedia.org/wiki/HTML) - Programming language providing content and structure of website.
