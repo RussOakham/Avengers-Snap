@@ -133,7 +133,7 @@ body {
     padding: .5rem 0 .5rem .5rem;
 }
 
-/* Game Styling */
+/* Game Styling - Panel*/
 
 #game-panel {
     -ms-flex-wrap: wrap;
@@ -156,6 +156,7 @@ body {
     min-height: 320px;
 }
 
+/* Game Styling - Playing Cards */
 .memory-card {
     width: 100px;
     height: 140px;
@@ -213,6 +214,7 @@ body {
             transform: rotateY(180deg);
 }
 
+/* Character Card Styling - Naming convention aligned to JavaScript functional requirements */
 .easyavenger1,
 .easy2avenger1,
 .mediumavenger1,
@@ -364,8 +366,6 @@ body {
     background-position: center;
 }
 
-/* Playing Card Styling */
-
 /* Modal Styling */
 .modal-content {
     background-image: -o-radial-gradient(circle, lightcyan, darkcyan);
@@ -419,7 +419,7 @@ body {
     background-image: radial-gradient(circle, lightcoral, darkred);
 }
 
-/* Audio Modal */
+/* Modal Styling - Audio modal specific */
 .btn-primary {
     border: 1px solid black;
     background-image: -o-radial-gradient(lightgreen, darkgreen);
@@ -459,7 +459,7 @@ body {
     margin-right: 5px;
 }
 
-/* Avengers Bio Page */
+/* Avengers Bio Page Styling */
 
 .text-box-lg {
     background-image: -o-radial-gradient(circle, yellow, orange);
