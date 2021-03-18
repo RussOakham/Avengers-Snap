@@ -25,6 +25,7 @@
 </head>
 
 <body>
+    <!-- Navigation taken from bootstrap.com -->
     <section class="navigation sticky-top">
         <header>
             <nav class="navbar navbar-expand-lg navbar-light navbar-colour bangers-font">
@@ -49,6 +50,7 @@
         </header>
     </section>
 
+    <!-- Visual banner identifying 'Avengers Snap' game -->
     <section class="container logo-banner container-max-width">
         <div class="banner-container">
             <div class="avengers-banner">
@@ -56,6 +58,7 @@
         </div>
     </section>
 
+    <!-- Game Control banner - single row on desktop, stacked 2 rows on small viewport -->
     <section class="container game-controls bangers-font container-max-width">
         <div class="flex-column d-flex align-items-center flex-sm-row justify-content-sm-between">
             <div class="d-flex">
@@ -84,12 +87,14 @@
         </div>
     </section>
 
+    <!-- Game Panel Div - Populated with playing cards when difficulty chosen from 'how to play' modal -->
     <section class="container game-section container-max-width">
         <div id="game-panel">
 
         </div>
     </section>
 
+    <!-- Footer - Website designed and social info -->
     <section class="footer-section bangers-font">
         <div class="container footer text-center d-flex justify-content-center container-max-width">
             <div class="footer-info">
@@ -107,7 +112,7 @@
     <!-- Modals -->
 
     <section id="modals">
-        <!-- 'How to Play' Modal -->
+        <!-- 'How to Play' Modal - Launches on page load and via navbar/button selection -->
         <div class="modal fade" id="ltp-modal" tabindex="-1" role="dialog" aria-labelledby="ltp-modal"
             aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
@@ -142,7 +147,7 @@
             </div>
         </div>
 
-        <!-- 'Congratulations' Modal -->
+        <!-- 'Congratulations' Modal - Launched when all cards matched -->
         <div class="modal fade" id="congrats-modal" tabindex="-1" role="dialog" aria-labelledby="congrats-modal"
             aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
@@ -180,7 +185,7 @@
             </div>
         </div>
 
-        <!-- Audio Controls Modal -->
+        <!-- Audio Controls Modal - called when audio settings button selected -->
         <div class="modal fade" id="audio-modal" tabindex="-1" role="dialog" aria-labelledby="audio-modal"
             aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
@@ -210,7 +215,7 @@
 
     </section>
 
-
+    <!-- Links to external Script Files -->
     <script src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"
