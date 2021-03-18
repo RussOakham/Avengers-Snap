@@ -11,7 +11,7 @@ let audio = {
     lastVolume: 0,
 };
 
-// 5x Sound Functions used to play audio effects
+// Function calls cardFlipAudio on card flip
 function cardFlipSound() {
     if (audio.soundMute === true) {
         return;
@@ -20,6 +20,7 @@ function cardFlipSound() {
     }
 }
 
+// Function calls cardMatchAudio on successful match of two cards
 function cardMatchSound() {
     if (audio.soundMute === true) {
         return;
@@ -28,6 +29,7 @@ function cardMatchSound() {
     }
 }
 
+// Function calls cardNoMatchAudio on unsuccessful match of two cards
 function cardNoMatchSound() {
     if (audio.soundMute === true) {
         return;
@@ -36,6 +38,7 @@ function cardNoMatchSound() {
     }
 }
 
+// Function calls gameCompleteSound when all cards successfully matched
 function gameCompleteSound() {
     if (audio.soundMute === true) {
         return;
@@ -44,6 +47,7 @@ function gameCompleteSound() {
     }
 }
 
+// Function calls resetGameSound when reset button is clicked
 function resetGameSound() {
     if (audio.soundMute === true) {
         return;
@@ -52,7 +56,7 @@ function resetGameSound() {
     }
 }
 
-// Function mutes sound effect audio is sound mute is toggled
+// Function mutes sound effect audio if sound mute is toggled
 function audioMute() {
     if (audio.soundMute === false) {
         audio.soundMute = true;
