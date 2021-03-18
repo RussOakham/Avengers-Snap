@@ -246,28 +246,28 @@ The colour palette for the site was originally created by;
 
 The photos and images used for this site were obtained from;
 - **[Shutterstock](https://www.shutterstock.com/)**: From the following contributors;
-    - Captain America Bio Picture: Aratehortua
-    - Snap logo: Suryamann
-    - Avengers Banner Logo: Rose Carson.
+    - [Captain America Bio Picture](https://www.shutterstock.com/image-vector/vector-superhero-posing-isolated-on-white-436277203): Aratehortua
+    - [Snap logo](https://www.shutterstock.com/image-illustration/snap-comic-speech-bubble-cartoon-abstract-1885280836): Suryamann
+    - [Avengers Banner Logo](https://www.shutterstock.com/image-photo/kiev-ukraine-february-19-2019-set-1328369057): Rose Carson.
 **Game Card Images**:
 - **[iconfinder.com](https://www.iconfinder.com/)**;
     Game Card Images:
-    - Groot, Captain America, Iron Man, Spiderman, Ant Man, Thor, Hawkeye, Thanos, Daredevil, Wolverine, Deadpool and Cyclops: Vectto
-    - Hulk: Sujud.ico
+    - [Groot](https://www.iconfinder.com/icons/2525039/fighting_tree_groot_super_hero_tree_icon), [Captain America](https://www.iconfinder.com/icons/2624896/avengers_captain_captain_america_super_hero_icon), [Iron Man](https://www.iconfinder.com/icons/2624893/avengers_iron_man_marvel_super_hero_icon), [Spiderman](https://www.iconfinder.com/icons/2624863/hero_marvel_spider_man_super_hero_icon), [Ant Man](https://www.iconfinder.com/icons/2624864/c_-_3po_robot_see_-_threepio_star_wars_icon), [Thor](https://www.iconfinder.com/icons/2624889/hero_super_thor_wings_icon), [Hawkeye](https://www.iconfinder.com/icons/2624860/hawkeye_hero_marvel_characteristic_super_hero_icon), [Thanos](https://www.iconfinder.com/icons/2624867/humanoid_loki_super_villain_thanos_icon), [Daredevil](https://www.iconfinder.com/icons/2624861/daredevil_marvel_mutant_super_hero_icon), [Wolverine](https://www.iconfinder.com/icons/2624866/evil_batman_marvel_super_hero_x_-_men_icon), and [Deadpool](https://www.iconfinder.com/icons/2624892/deadpool_hero_marvel_super_hero_icon): Vectto
+    - [Hulk](https://www.iconfinder.com/icons/4815751/avengers_hulk_marvel_superhero_icon): Sujud.ico
 **Avengers Bio Images**
 - **[clipart-library.com](http://clipart-library.com/)**;
     - [Ant Man](http://clipart-library.com/clip-art/242-2423316_ant-man-png-transparent-images-marvel-ant-man.htm)
 - **[freepngimg.com](https://freepngimg.com/)**;
-    - Daredevil: Scott Ward
-    - Deadpool: Lydia Simmons
-    - Groot: Lydia Simmons
-    - Hawkeye: Lydia Simmons
-    - Hulk: Scott Ward
-    - Iron Man: Brett Croft
-    - Spider-Man: Brett Croft
-    - Thanos: Alexis Bailey
-    - Thor: Alexis Bailey
-    - Wolverine: Brett Croft
+    - [Daredevil](https://freepngimg.com/png/15492-daredevil-png-hd): Scott Ward
+    - [Deadpool](https://freepngimg.com/png/11925-deadpool-poster-png): Lydia Simmons
+    - [Groot](https://freepngimg.com/png/89830-superhero-rocket-destroyer-character-drax-fictional-groot): Lydia Simmons
+    - [Hawkeye](https://freepngimg.com/png/13878-hawkeye-free-download-png): Lydia Simmons
+    - [Hulk](https://freepngimg.com/png/20367-hulk-clipart): Scott Ward
+    - [Iron Man](https://freepngimg.com/png/12106-iron-man-png-file): Brett Croft
+    - [Spider-Man](https://freepngimg.com/png/17101-spider-man-download-png): Brett Croft
+    - [Thanos](https://freepngimg.com/png/83698-figure-panther-figurine-black-iron-action-thanos): Alexis Bailey
+    - [Thor](https://freepngimg.com/png/17885-thor-transparent): Alexis Bailey
+    - [Wolverine](https://freepngimg.com/png/19796-wolverine-transparent): Brett Croft
 
 ### Acknowledgements
  - Thanks to my mentor, [Precious Ijege](https://github.com/precious-ijege) for his suggestions, time and support.
