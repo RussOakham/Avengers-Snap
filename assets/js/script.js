@@ -52,7 +52,7 @@ function noGameCards() {
     }
 }
 
-// Create Cards and card layout
+// Create Cards and card layout, appending to game-panel div
 function createCardLayout(gameCards) {
     for (let i = 1; i < app.gameCards + 1; i++) {
         const cardDiv = document.createElement("div");
@@ -84,7 +84,7 @@ function createCardLayout(gameCards) {
     }
 }
 
-// Function shuffles card deck;
+// Function shuffles order of generated cards;
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -106,7 +106,9 @@ function startGame() {
 
 
 
-// On click, adds 'flip' to class name and saves clicked div to 'firstCard' variable. If lockBoard variable is true, 'firstCard' is clicked twice, or yellow 'game-panel' is clicked, function exits and no action in taken. Once secondCard is selected, checkMatch and moveCounter functions are called.
+// On click, adds 'flip' to class name and saves clicked div to 'firstCard' variable. 
+// If lockBoard variable is true, 'firstCard' is clicked twice, or yellow 'game-panel' is clicked, function exits and no action in taken.
+// Once secondCard is selected, checkMatch and moveCounter functions are called.
 function flipCard() {
     if (app.lockBoard) return;
     if (event.target === document.getElementById('game-panel')) return;
@@ -139,7 +141,9 @@ function checkMatch() {
     unflipCards();
 }
 
-// Removes 'click' event listener from matched cards.
+// Sets successfully matched cards non-interactive to click events.
+// Meaning, they can no longer be clicked again in the game.
+// This prevents function logic difficulties.
 function disableCards() {
     app.lockBoard = true;
     setTimeout(() => {
@@ -160,13 +164,13 @@ function unflipCards() {
     }, 1000);
 }
 
-// Resets all variables at end of round, ready for new match round to being.
+// Resets all variables at end of round, ready for new match round to begin.
 function resetBoard() {
     [app.hasFlippedCard, app.lockBoard] = [false, false];
     [app.firstCard, app.secondCard] = [null, null];
 }
 
-// Add 1 increment to app.moves tally. Function called at end of secondCard part of flipCard() function.
+// Add 1 increment to app.moves tally. Function called after secondCard selected in flipCard() function.
 function moveCounter() {
     app.moves++;
     app.counter.innerHTML = app.moves;
@@ -178,7 +182,9 @@ function moveCounter() {
     }
 }
 
-// Timer function sequentially adds 1 second to 'app.timer' every 1000ms and updates innerHTML. When app.seconds reach 60, 1 is incremented to app.minute and app.second reset to 0. When app. minute reaches 60, 1 increment is added to app.hour and app.minutes reset to zero.
+// Timer function sequentially adds 1 second to 'app.timer' every 1000ms and updates innerHTML. 
+// When app.seconds reach 60, 1 is incremented to app.minute and app.second reset to 0. 
+// When app. minute reaches 60, 1 increment is added to app.hour and app.minutes reset to zero.
 function startTimer() {
     app.interval = setInterval(function () {
         app.timer.innerHTML = app.minute + ':' + app.second;
@@ -206,7 +212,8 @@ function clearGameCards() {
     app.matchedCards = [];
 }
 
-// Function resets app.second, minute and hour variables to zero. Clears the app.interval so startTimer function ceases to increment and resets timer innerHTML to 0:00.
+// Function resets app.second, minute and hour variables to zero. 
+// Clears the app.interval so startTimer function ceases to increment and resets timer innerHTML to 0:00.
 function resetTimer() {
     app.second = 0;
     app.minute = 0;
@@ -228,7 +235,8 @@ function resetGame() {
     resetTimer();
 }
 
-// Function resets current game level by calling clearGameCards, Reset Moves and resetTimer functions. These functions do not reset the app.difficultyLevel chosen by the user - so when startGame(); function is called, these earlier inputs are remembered.
+// Function resets current game level by calling clearGameCards, Reset Moves and resetTimer functions. 
+// These functions do not reset the app.difficultyLevel chosen by the user - so when startGame(); function is called, these earlier difficulty input is remembered.
 function resetCurrentGame() {
     clearGameCards();
     resetMoves();
@@ -237,7 +245,8 @@ function resetCurrentGame() {
     resetGameSound();
 }
 
-// Function determines if game is complete by testing if number of paired cards equals number of gameCard pairs generated. If SourceBuffer, then timer is stopped via clearing internal and congratulations modal is called
+// Function determines if game is complete by testing if number of paired cards equals number of gameCard pairs generated. 
+// If yes, then timer is stopped via clearing internal and congratulations modal is called
 function gameComplete() {
     if (app.matchedCards.length === app.gameCards) {
         clearInterval(app.interval);
