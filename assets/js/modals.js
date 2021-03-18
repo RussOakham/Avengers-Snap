@@ -7,7 +7,7 @@ $(window).on('load', function () {
 function congratsModal() {
     app.moveScore.innerHTML = app.moves;
     if (app.minute == 0) {
-        app.timeScore.innerHTML = app.second+" seconds";
+        app.timeScore.innerHTML = (app.second - 1)+" seconds";
     }
     else {
         app.timeScore.innerHTML = app.minute+" minutes "+app.second+" seconds";
