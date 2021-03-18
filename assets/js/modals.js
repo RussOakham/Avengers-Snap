@@ -1,4 +1,5 @@
 // Load how to play modal on window load and close modal on difficulty selection.
+// Adapted from StackOverflow: https://stackoverflow.com/questions/10233550/launch-bootstrap-modal-on-page-load
 $(window).on('load', function () {
     $('#ltp-modal').modal('show');
 });

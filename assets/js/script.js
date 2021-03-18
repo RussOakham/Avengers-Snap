@@ -130,6 +130,7 @@ function flipCard() {
 // Logic check to see if firstCard dataset and secondCard dataset match.
 // If Match = run disableCards();
 // if NoMatch = run unflipCards();
+// Code adapted from https://marina-ferreira.github.io/tutorials/js/memory-game.
 function checkMatch() {
     if (app.firstCard.dataset.avenger === app.secondCard.dataset.avenger) {
         disableCards();
@@ -165,6 +166,7 @@ function unflipCards() {
 }
 
 // Resets all variables at end of round, ready for new match round to begin.
+// Funtion Adapted from https://marina-ferreira.github.io/tutorials/js/memory-game/
 function resetBoard() {
     [app.hasFlippedCard, app.lockBoard] = [false, false];
     [app.firstCard, app.secondCard] = [null, null];
@@ -185,6 +187,7 @@ function moveCounter() {
 // Timer function sequentially adds 1 second to 'app.timer' every 1000ms and updates innerHTML. 
 // When app.seconds reach 60, 1 is incremented to app.minute and app.second reset to 0. 
 // When app. minute reaches 60, 1 increment is added to app.hour and app.minutes reset to zero.
+// Code adapted from https://scotch.io/tutorials/how-to-build-a-memory-matching-game-in-javascript
 function startTimer() {
     app.interval = setInterval(function () {
         app.timer.innerHTML = app.minute + ':' + app.second;
