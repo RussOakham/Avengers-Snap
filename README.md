@@ -26,7 +26,7 @@ The live website can be found at the following link;
     - [**Existing Features**](#existing-features)
     - [**Features to consider in future**](#features-to-consider-implementing-in-future)
 
-3. [**Technologies Used**](#3.-technologies-used)
+3. [**Technologies Used**](#3-technologies-used)
 
 4. [**Testing**](#4-testing)
 
