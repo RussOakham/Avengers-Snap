@@ -16,24 +16,24 @@ The live website can be found at the following link;
 
 ## Table of Contents
 
-1. [**UX**](#1.-ux)
+1. [**UX**](#1-ux)
     - [**User-Stories**](#user-stories)
     - [**Structure**](#structure)
     - [**Skeleton**](#skeleton)
     - [**Surface**](#surface)
 
-2. [**Features**](#2.-features)
+2. [**Features**](#2-features)
     - [**Existing Features**](#existing-features)
     - [**Features to consider in future**](#features-to-consider-implementing-in-future)
 
 3. [**Technologies Used**](#3.-technologies-used)
 
-4. [**Testing**](#4.-testing)
+4. [**Testing**](#4-testing)
 
-5. [**Deployment**](#5.-deployment)
+5. [**Deployment**](#5-deployment)
     - [**GitHub Pages**](#github-pages)
 
-6. [**Credits**](#6.-credits)
+6. [**Credits**](#6-credits)
     - [**Design and Research**](#design-and-research)
     - [**Technical**](#technical)
     - [**Content**](#content)
@@ -42,7 +42,6 @@ The live website can be found at the following link;
 
 
 ## 1. UX
-
 Overview of UX decisions, structure etc. Examples of websites I have viewed as part of research & resulting UX design decisions.
 
 ### User Stories
@@ -121,7 +120,6 @@ Before beginning development, I listed some styling ideas that I felt benefit th
     - Logo: Navigates to the home page on click.
 
 ## 2. Features
-
 ### Existing Features
 #### **The Header** includes:
 - **Website Logo**: Builds brand awareness amongst users.
