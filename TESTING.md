@@ -6,7 +6,7 @@
     - [**JavaScript**](#javascript)
     - [**Google Lighthouse Audit**](#google-lighthouse-audit)
 
-2. [**Responsive Device & Browser Testing**](#responsive-device-browser-testing)
+2. [**Responsive Device  Browser Testing**](#responsive-device--browser-testing)
     - [**Responsiveness**](#responsiveness)
     - [**Browser Compatibility**](#browser-compatibility)
 
