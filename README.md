@@ -208,14 +208,13 @@ To run a version of the site locally, you can clone this repository using the fo
 In a code editor of your choice;
 
 1. Go to [GitHub.com](https://github.com/)
-2. Login to my account.
-3. Click on 'Responsitories'
-4. Click on 'Avengers Snap'
-5. Click on the 'Code' button.
-6. Under 'HTTPS' click the clipboard icon to the right of the URL.
-7. In your IDE of choice, open a repository or create a new repository.
-8. Open Terminal ('Terminal' then 'New Terminal' from the top ribbon menu in GitPod.)
-9. Type 'git clone', paste URL link and press enter.
+2. Click on 'Responsitories'
+3. Click on 'Avengers Snap'
+4. Click on the 'Code' button.
+5. Under 'HTTPS' click the clipboard icon to the right of the URL.
+6. In your IDE of choice, open a repository or create a new repository.
+7. Open Terminal ('Terminal' then 'New Terminal' from the top ribbon menu in GitPod.)
+8. Type 'git clone', paste URL link and press enter.
 
 Additional information around these cloning steps can be found on [GitHub Pages Help Page](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository).
 
