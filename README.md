@@ -70,8 +70,8 @@ As the purpose of the website is to showcase the card game, I want to ensure the
 At this point I began creating wireframes, using the above structure considerations. I used [Balsamiq](https://balsamiq.com/) these below;
 
 - [Home page on desktop and mobile](design-resources/images/Home.PNG)
-- [Home Page - welcome modal on desktop and mobile](design-resources/images/Modals.PNG)
-- [Avengers Page on desktop and mobile](design-resources/images/Avengers-Page.PNG)
+- [Home Page - welcome modal on desktop and mobile](design-resources/images/Modals.png)
+- [Avengers Page on desktop and mobile](design-resources/images/Avengers-Page.png)
 
 ### Surface
 This is the sensory design section of a website, or how it looks, feels and sounds. I wanted the design to be clean and the colour scheme to be reminiscent of Marvel's cinematic universe, as it is a very popular brand internationally. 
